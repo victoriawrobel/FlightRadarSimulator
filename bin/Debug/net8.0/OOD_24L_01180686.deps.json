@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OOD_24L_01180686/1.0.0": {
+        "runtime": {
+          "OOD_24L_01180686.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OOD_24L_01180686/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
