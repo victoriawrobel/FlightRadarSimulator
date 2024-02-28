@@ -3,7 +3,7 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class CargoPlane : Plane
     {
-        public float MaxLoad { get; set; }
+        public float MaxLoad { get; protected set; }
 
         public CargoPlane(ulong ID, string serialNr, string countryISO, string model, float maxLoad) : base(ID, serialNr, countryISO, model)
         {

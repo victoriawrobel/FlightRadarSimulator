@@ -3,12 +3,12 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class Airport : Entity
     {
-        public string Name { get; set; }
-        public string Code { get; set; }
-        public float Longitude { get; set; }
-        public float Latitude { get; set; }
-        public float AMSL { get; set; }
-        public string CountryISO { get; set; }
+        public string Name { get; protected set; }
+        public string Code { get; protected set; }
+        public float Longitude { get; protected set; }
+        public float Latitude { get; protected set; }
+        public float AMSL { get; protected set; }
+        public string CountryISO { get; protected set; }
 
         public Airport(ulong ID, string name, string code, float longitude, float latitude, float aMSL,
             string countryISO) : base(ID)

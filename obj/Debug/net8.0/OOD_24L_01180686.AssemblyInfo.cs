@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OOD_24L_01180686")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3eabe7061b752cefb28424d0507d273f06992dee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e9e760b370309d195d8e07521472dea6acc8750")]
 [assembly: System.Reflection.AssemblyProductAttribute("OOD_24L_01180686")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OOD_24L_01180686")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

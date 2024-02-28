@@ -3,7 +3,7 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class Entity
     {
-        public ulong ID { get; set; }
+        public ulong ID { get; protected set; }
 
         public Entity(ulong ID)
         {

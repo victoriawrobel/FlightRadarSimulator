@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOD_24L_01180686.source.Readers
 {
-    public static class Reader
+    internal static class Reader
     {
         public static readonly Dictionary<string, Func<string[], object>> objectCreators = new Dictionary<string, Func<string[], object>>
             {

@@ -3,9 +3,9 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class PassengerPlane : Plane
     {
-        public ushort FirstClassSize { get; set; }
-        public ushort BusinessClassSize { get; set; }
-        public ushort EconomyClassSize { get; set; }
+        public ushort FirstClassSize { get; protected set; }
+        public ushort BusinessClassSize { get; protected set; }
+        public ushort EconomyClassSize { get; protected set; }
 
         public PassengerPlane(ulong ID, string serialNr, string countryISO, string model, ushort firstClassSize, ushort businessClassSize, ushort economyClassSize) : 
             base(ID, serialNr, countryISO, model)
