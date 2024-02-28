@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace OOD_24L_01180686.src.Objects
+namespace OOD_24L_01180686.source.Objects
 {
     public class Person : Entity
     {
-        public string Name;
-        public ulong Age;
-        public string Phone;
-        public string Email;
+        public string Name { get; set; }
+        public ulong Age { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
 
         public Person(ulong ID, string name, ulong age, string phone, string email) : base(ID)
         {

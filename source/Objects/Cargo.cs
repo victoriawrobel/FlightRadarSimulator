@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOD_24L_01180686.src.Objects
+namespace OOD_24L_01180686.source.Objects
 {
     public class Cargo : Entity
     {
-        public float Weight;
-        public string Code;
-        public string Description;
+        public float Weight { get; set; }
+        public string Code { get; set; }
+        public string Description { get; set; }
 
         public Cargo(ulong ID, float weight, string code, string description) : base(ID)
         {

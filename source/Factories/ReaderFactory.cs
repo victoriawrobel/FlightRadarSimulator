@@ -1,18 +1,18 @@
-﻿using OOD_24L_01180686.src.Readers;
+﻿using OOD_24L_01180686.source.Readers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOD_24L_01180686.src.Factories
+namespace OOD_24L_01180686.source.Factories
 {
-    public interface IFactory
+    public interface IReaderFactory
     {
         IDataRead Create();
     }
 
-    public abstract class FileReaderFactory : IFactory
+    public abstract class FileReaderFactory : IReaderFactory
     {
         virtual public IDataRead Create()
         {

@@ -7,12 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace OOD_24L_01180686.src.Objects
+namespace OOD_24L_01180686.source.Objects
 {
     public class Passenger : Person
     {
-        public string CabinClass;
-        public ulong Miles;
+        public string CabinClass { get; set; }
+        public ulong Miles { get; set; }
 
         public Passenger(ulong ID, string name, ulong age, string phone, string email, string cabinClass, ulong miles) : base(ID, name, age, phone, email)
         {

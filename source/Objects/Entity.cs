@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOD_24L_01180686.src.Objects
+namespace OOD_24L_01180686.source.Objects
 {
     public class Entity
     {
@@ -20,5 +20,4 @@ namespace OOD_24L_01180686.src.Objects
             return $"Entity: {ID}";
         }
     }
-
 }

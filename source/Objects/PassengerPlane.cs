@@ -5,15 +5,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOD_24L_01180686.src.Objects
+namespace OOD_24L_01180686.source.Objects
 {
     public class PassengerPlane : Plane
     {
-        public ushort FirstClassSize;
-        public ushort BusinessClassSize;
-        public ushort EconomyClassSize;
+        public ushort FirstClassSize { get; set; }
+        public ushort BusinessClassSize { get; set; }
+        public ushort EconomyClassSize { get; set; }
 
-        public PassengerPlane(ulong ID, string serialNr, string countryISO, string model, ushort firstClassSize, ushort businessClassSize, ushort economyClassSize) : base(ID, serialNr, countryISO, model)
+        public PassengerPlane(ulong ID, string serialNr, string countryISO, string model, ushort firstClassSize, ushort businessClassSize, ushort economyClassSize) : 
+            base(ID, serialNr, countryISO, model)
         {
             this.FirstClassSize = firstClassSize;
             this.BusinessClassSize = businessClassSize;
@@ -22,7 +23,8 @@ namespace OOD_24L_01180686.src.Objects
 
         public override string ToString()
         {
-            return $"PassengerPlane: {ID} {SerialNr} {CountryISO} {Model} {FirstClassSize} {BusinessClassSize} {EconomyClassSize}";
+            return
+                $"PassengerPlane: {ID} {SerialNr} {CountryISO} {Model} {FirstClassSize} {BusinessClassSize} {EconomyClassSize}";
         }
     }
 }

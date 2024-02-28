@@ -1,9 +1,9 @@
-﻿using OOD_24L_01180686.src.Factories;
-using OOD_24L_01180686.src.Objects;
-using OOD_24L_01180686.src.Readers;
+﻿using OOD_24L_01180686.source.Factories;
+using OOD_24L_01180686.source.Objects;
+using OOD_24L_01180686.source.Readers;
 
 
-namespace OOD_24L_01180686.src
+namespace OOD_24L_01180686.source
 {
     class Program
     {
@@ -12,11 +12,11 @@ namespace OOD_24L_01180686.src
             FileReaderFactory fileReaderFactory = new FTRReaderFactory();
             var fileReader = fileReaderFactory.Create();
             var list = fileReader.ReadData(Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1.ftr");
-            foreach(var item in list)
-            {
-                Console.WriteLine(item.ToString());
-            }
 
+            FileWriterFactory fileWriterFactory = new JSONWriterFactory();
+            var fileWriter = fileWriterFactory.Create();
+            fileWriter.WriteData(list,
+                Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1serializer.json");
         }
     }
 }
