@@ -6,14 +6,17 @@ namespace OOD_24L_01180686.source
     {
         public static void Main(string[] args)
         {
-            FileReaderFactory fileReaderFactory = new FTRReaderFactory();
+            IReaderFactory fileReaderFactory = new FTRReaderFactory();
             var fileReader = fileReaderFactory.Create();
+            Console.WriteLine("Deserializing...");
             var list = fileReader.ReadData(Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1.ftr");
+            Console.WriteLine("Deserialization complete.");
 
-            FileWriterFactory fileWriterFactory = new JSONWriterFactory();
+            IWriterFactory fileWriterFactory = new JSONWriterFactory();
             var fileWriter = fileWriterFactory.Create();
-            fileWriter.WriteData(list,
-                Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1serializer.json");
+            Console.WriteLine("Serializing...");
+            fileWriter.WriteData(list, Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1serializer.json");
+            Console.WriteLine("Serialization complete.");
         }
     }
 }

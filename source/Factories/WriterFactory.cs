@@ -7,17 +7,9 @@ namespace OOD_24L_01180686.source.Factories
         IDataWrite Create();
     }
 
-    public abstract class FileWriterFactory : IWriterFactory
+    public class JSONWriterFactory : IWriterFactory
     {
-        public virtual IDataWrite Create()
-        {
-            return null;
-        }
-    }
-
-    public class JSONWriterFactory : FileWriterFactory
-    {
-        public override IDataWrite Create()
+        public IDataWrite Create()
         {
             return new JSONWriter();
         }

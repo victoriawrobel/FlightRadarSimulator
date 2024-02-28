@@ -7,17 +7,9 @@ namespace OOD_24L_01180686.source.Factories
         IDataRead Create();
     }
 
-    public abstract class FileReaderFactory : IReaderFactory
+    public class FTRReaderFactory : IReaderFactory
     {
-        virtual public IDataRead Create()
-        {
-            return null;
-        }
-    }
-
-    public class FTRReaderFactory : FileReaderFactory
-    {
-        public override IDataRead Create()
+        public IDataRead Create()
         {
             return new FTRReader();
         }
