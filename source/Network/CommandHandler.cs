@@ -1,4 +1,7 @@
 ﻿using OOD_24L_01180686.source.ServerActions;
+using OOD_24L_01180686.source.Readers;
+using System.Text;
+using OOD_24L_01180686.source.Writers;
 
 
 namespace OOD_24L_01180686.source.Network
@@ -14,7 +17,7 @@ namespace OOD_24L_01180686.source.Network
                 {
                     if (!Server.IsRunning)
                     {
-                        Task.Run(() => server.StartServer());
+                        server.StartServer();
                     }
                     else
                     {
@@ -26,7 +29,9 @@ namespace OOD_24L_01180686.source.Network
                     if (Server.IsRunning)
                     {
                         Console.WriteLine("Creating a snapshot...");
-                        Server.CreateSnapshot();
+                        Console.WriteLine("Objects count: " + Server.Objects.Count());
+                        JSONWriter writer = new JSONWriter();
+                        writer.WriteData(Server.Objects, Directory.GetCurrentDirectory() + $"..\\..\\..\\..\\DataFiles\\snapshot_{DateTime.Now:HH_mm_ss}.json");
                     }
                     else
                     {

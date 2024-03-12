@@ -1,21 +1,22 @@
 ﻿using NetworkSourceSimulator;
+using OOD_24L_01180686.source.Readers;
 using OOD_24L_01180686.source.Writers;
+using System.Text;
 
 namespace OOD_24L_01180686.source.ServerActions
 {
     public class Server
     {
-        private readonly IDataWrite DataWrite;
-        private NetworkSourceSimulator.NetworkSourceSimulator server;
+        private static NetworkSourceSimulator.NetworkSourceSimulator server;
+        public static List<object> Objects = new List<object>();
         public static bool IsRunning = false;
         public static string Filepath;
-        public static int MaxDelay = 1000;
-        public static int MinDelay = 100;
+        public static int MaxDelay = 0;
+        public static int MinDelay = 0;
 
-        public Server(string filepath, IDataWrite dataWrite)
+        public Server(string filepath)
         {
             Filepath = filepath;
-            this.DataWrite = dataWrite;
         }
         
         public async Task StartServer()
@@ -29,7 +30,7 @@ namespace OOD_24L_01180686.source.ServerActions
             Console.WriteLine("Server started.");
             server = new NetworkSourceSimulator.NetworkSourceSimulator(Filepath, MinDelay, MaxDelay);
             server.OnNewDataReady += ServerOnNewDataReady;
-            server.Run();
+            Task.Run(() => server.Run());
 
         }
 
@@ -44,21 +45,21 @@ namespace OOD_24L_01180686.source.ServerActions
 
         public static void ServerOnNewDataReady(object sender, NewDataReadyArgs e)
         {
-            Console.WriteLine("New data ready: " + e.MessageIndex); //TODO: expand the functionality
+            Message message = server.GetMessageAt(e.MessageIndex);
+            //Console.WriteLine("New message received.");
+            Objects.Add(MessageParser(message));
+            
         }
 
-        
-        public static void CreateSnapshot()
+        private static object MessageParser(Message message)
         {
-            //string snapshotFileName = Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\" + $"snapshot_{DateTime.Now:HH_mm_ss}.json";
-            //var data = GetData();
-            //DataWrite.WriteData(data, snapshotFileName);
-            //Console.WriteLine($"Snapshot saved to {snapshotFileName}"); //TODO : fix accessibility
+            string objectType = Encoding.Default.GetString(message.MessageBytes, 0, 3);
+            if (Reader.objectCreatorsFromMessages.TryGetValue(objectType, out var creator))
+            {
+                return creator(message.MessageBytes);
+            }
+            throw new ArgumentException("Unrecognized object type.");
         }
 
-        public static IEnumerable<object> GetData()
-        {
-            return null; //TODO : implement
-        }
     }
 }

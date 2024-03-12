@@ -25,7 +25,7 @@ namespace OOD_24L_01180686.source
 
             string file = Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1.ftr";
             IDataWrite dataWrite = new JSONWriter();
-            Server server = new Server(file, dataWrite);
+            Server server = new Server(file);
 
             CommandHandlerClass.CommandHandler(server);
 
