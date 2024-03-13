@@ -1,7 +1,4 @@
-﻿using OOD_24L_01180686.source.ServerActions;
-using OOD_24L_01180686.source.Readers;
-using System.Text;
-using OOD_24L_01180686.source.Writers;
+﻿using OOD_24L_01180686.source.Writers;
 
 
 namespace OOD_24L_01180686.source.Network
@@ -31,7 +28,9 @@ namespace OOD_24L_01180686.source.Network
                         Console.WriteLine("Creating a snapshot...");
                         Console.WriteLine("Objects count: " + Server.Objects.Count());
                         JSONWriter writer = new JSONWriter();
-                        writer.WriteData(Server.Objects, Directory.GetCurrentDirectory() + $"..\\..\\..\\..\\DataFiles\\snapshot_{DateTime.Now:HH_mm_ss}.json");
+                        writer.WriteData(Server.Objects,
+                            Directory.GetCurrentDirectory() +
+                            $"..\\..\\..\\..\\DataFiles\\snapshot_{DateTime.Now:HH_mm_ss}.json");
                     }
                     else
                     {
@@ -45,6 +44,7 @@ namespace OOD_24L_01180686.source.Network
                         server.StopServer().Wait();
                         Console.WriteLine("Server stopped.");
                     }
+
                     break;
                 }
                 else

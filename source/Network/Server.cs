@@ -1,27 +1,41 @@
 ﻿using NetworkSourceSimulator;
 using OOD_24L_01180686.source.Readers;
-using OOD_24L_01180686.source.Writers;
 using System.Text;
 
-namespace OOD_24L_01180686.source.ServerActions
+namespace OOD_24L_01180686.source.Network
 {
     public class Server
     {
-        private static NetworkSourceSimulator.NetworkSourceSimulator server;
+        private NetworkSourceSimulator.NetworkSourceSimulator server;
+        private static Server serverInstance;
         public static List<object> Objects = new List<object>();
-        public static bool IsRunning = false;
-        public static string Filepath;
-        public static int MaxDelay = 1000;
-        public static int MinDelay = 100;
+        internal static bool IsRunning = false;
+        private static object serverLock = new object();
+        private string Filepath;
+        private int MaxDelay = 100;
+        private int MinDelay = 10;
 
-        public Server(string filepath)
+        private Server(string filepath)
         {
             Filepath = filepath;
         }
-        
-        public async Task StartServer()
+
+        public static Server GetInstance(string filepath)
         {
-            if(!File.Exists(Filepath))
+            lock (serverLock)
+            {
+                if (serverInstance == null)
+                {
+                    serverInstance = new Server(filepath);
+                }
+            }
+
+            return serverInstance;
+        }
+
+        public void StartServer()
+        {
+            if (!File.Exists(Filepath))
             {
                 throw new FileNotFoundException($"File {Filepath} not found");
             }
@@ -31,34 +45,34 @@ namespace OOD_24L_01180686.source.ServerActions
             server = new NetworkSourceSimulator.NetworkSourceSimulator(Filepath, MinDelay, MaxDelay);
             server.OnNewDataReady += ServerOnNewDataReady;
             Task.Run(() => server.Run());
-
         }
 
-        public async Task StopServer()
+        public Task StopServer()
         {
             if (IsRunning)
             {
                 IsRunning = false;
                 Console.WriteLine("Server stopping...");
             }
+
+            return Task.CompletedTask;
         }
 
-        public static void ServerOnNewDataReady(object sender, NewDataReadyArgs e)
+        private void ServerOnNewDataReady(object sender, NewDataReadyArgs e)
         {
-            Message message = server.GetMessageAt(e.MessageIndex);
+            var message = server.GetMessageAt(e.MessageIndex);
             Objects.Add(MessageParser(message));
-            
         }
 
         private static object MessageParser(Message message)
         {
-            string objectType = Encoding.Default.GetString(message.MessageBytes, 0, 3);
+            var objectType = Encoding.Default.GetString(message.MessageBytes, 0, 3);
             if (Reader.objectCreatorsFromMessages.TryGetValue(objectType, out var creator))
             {
                 return creator(message.MessageBytes);
             }
+
             throw new ArgumentException("Unrecognized object type.");
         }
-
     }
 }

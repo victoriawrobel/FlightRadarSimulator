@@ -1,4 +1,4 @@
-﻿using OOD_24L_01180686.source.Objects;
+﻿
 
 namespace OOD_24L_01180686.source.Readers
 {
@@ -23,6 +23,7 @@ namespace OOD_24L_01180686.source.Readers
                     objects.Add(LineParser(attr));
                 }
             }
+
             return objects;
         }
 
@@ -37,5 +38,4 @@ namespace OOD_24L_01180686.source.Readers
             throw new ArgumentException("Unrecognized object type.");
         }
     }
-    
 }

@@ -1,16 +1,12 @@
-﻿using NetworkSourceSimulator;
-using OOD_24L_01180686.source.Objects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using OOD_24L_01180686.source.Objects;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace OOD_24L_01180686.source.Readers
 {
     internal static class Reader
     {
-        public static readonly Dictionary<string, Func<string[], object>> objectCreators = new Dictionary<string, Func<string[], object>>
+        public static readonly Dictionary<string, Func<string[], object>> objectCreators =
+            new Dictionary<string, Func<string[], object>>
             {
                 {
                     "C",
@@ -58,107 +54,121 @@ namespace OOD_24L_01180686.source.Readers
             };
 
 
-
-        public static readonly Dictionary<string, Func<byte[], object>> objectCreatorsFromMessages = new Dictionary<string, Func<byte[], object>>
-        {
+        public static readonly Dictionary<string, Func<byte[], object>> objectCreatorsFromMessages =
+            new Dictionary<string, Func<byte[], object>>
             {
-                "NCR",
-                message =>
                 {
-                    return new Crew(
-                        BitConverter.ToUInt64(message, 7),
-                        Encoding.ASCII.GetString(message, 17, BitConverter.ToUInt16(message, 15)),
-                        BitConverter.ToUInt64(message, 17 + BitConverter.ToUInt16(message, 15)),
-                        Encoding.ASCII.GetString(message, 19 + BitConverter.ToUInt16(message, 15), 12),
-                        Encoding.ASCII.GetString(message, 33 + BitConverter.ToUInt16(message, 15), BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
-                        BitConverter.ToUInt16(message, 33 + BitConverter.ToUInt16(message, 15) + BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
-                        Encoding.ASCII.GetString(message, 35 + BitConverter.ToUInt16(message, 15) + BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15)), 1)
-                    );
-                }
-            },
-            {
-                "NPA",
-                message =>
+                    "NCR",
+                    message =>
+                    {
+                        return new Crew(
+                            BitConverter.ToUInt64(message, 7),
+                            Encoding.ASCII.GetString(message, 17, BitConverter.ToUInt16(message, 15)),
+                            BitConverter.ToUInt64(message, 17 + BitConverter.ToUInt16(message, 15)),
+                            Encoding.ASCII.GetString(message, 19 + BitConverter.ToUInt16(message, 15), 12),
+                            Encoding.ASCII.GetString(message, 33 + BitConverter.ToUInt16(message, 15),
+                                BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
+                            BitConverter.ToUInt16(message,
+                                33 + BitConverter.ToUInt16(message, 15) +
+                                BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
+                            Encoding.ASCII.GetString(message,
+                                35 + BitConverter.ToUInt16(message, 15) +
+                                BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15)), 1)
+                        );
+                    }
+                },
                 {
-                    return new Passenger(
-                        BitConverter.ToUInt64(message, 7),
-                        Encoding.ASCII.GetString(message, 17, BitConverter.ToUInt16(message, 15)),
-                        BitConverter.ToUInt64(message, 17 + BitConverter.ToUInt16(message, 15)),
-                        Encoding.ASCII.GetString(message, 19 + BitConverter.ToUInt16(message, 15), 12),
-                        Encoding.ASCII.GetString(message, 33 + BitConverter.ToUInt16(message, 15), BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
-                        Encoding.ASCII.GetString(message, 33 + BitConverter.ToUInt16(message, 15) + BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15)), 1),
-                        BitConverter.ToUInt64(message, 34 + BitConverter.ToUInt16(message, 15) + BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15)))
-                    );
-                }
-            },
-            {
-                "NCA", message => new Cargo(
+                    "NPA",
+                    message =>
+                    {
+                        return new Passenger(
+                            BitConverter.ToUInt64(message, 7),
+                            Encoding.ASCII.GetString(message, 17, BitConverter.ToUInt16(message, 15)),
+                            BitConverter.ToUInt64(message, 17 + BitConverter.ToUInt16(message, 15)),
+                            Encoding.ASCII.GetString(message, 19 + BitConverter.ToUInt16(message, 15), 12),
+                            Encoding.ASCII.GetString(message, 33 + BitConverter.ToUInt16(message, 15),
+                                BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
+                            Encoding.ASCII.GetString(message,
+                                33 + BitConverter.ToUInt16(message, 15) +
+                                BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15)), 1),
+                            BitConverter.ToUInt64(message,
+                                34 + BitConverter.ToUInt16(message, 15) +
+                                BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15)))
+                        );
+                    }
+                },
+                {
+                    "NCA", message => new Cargo(
                         BitConverter.ToUInt64(message, 7),
                         BitConverter.ToSingle(message, 15),
                         Encoding.UTF8.GetString(message, 19, 6),
                         Encoding.UTF8.GetString(message, 27, BitConverter.ToUInt16(message, 25)))
-            },
-            {
-                "NCP", message =>
+                },
                 {
-                    ushort modelLength = BitConverter.ToUInt16(message, 28);
-                    return new CargoPlane(
-                        BitConverter.ToUInt64(message, 7),
-                        Encoding.ASCII.GetString(message, 15, 10).TrimEnd('\0'),
-                        Encoding.ASCII.GetString(message, 25, 3),
-                        Encoding.ASCII.GetString(message, 30, modelLength),
-                        BitConverter.ToSingle(message, 30 + modelLength)
-                    );
-                }
-            },
-            {
-                "NPP", message =>
+                    "NCP", message =>
+                    {
+                        ushort modelLength = BitConverter.ToUInt16(message, 28);
+                        return new CargoPlane(
+                            BitConverter.ToUInt64(message, 7),
+                            Encoding.ASCII.GetString(message, 15, 10).TrimEnd('\0'),
+                            Encoding.ASCII.GetString(message, 25, 3),
+                            Encoding.ASCII.GetString(message, 30, modelLength),
+                            BitConverter.ToSingle(message, 30 + modelLength)
+                        );
+                    }
+                },
                 {
-                    ushort modelLength = BitConverter.ToUInt16(message, 28);
-                    return new PassengerPlane(
-                        BitConverter.ToUInt64(message, 7),
-                        Encoding.UTF8.GetString(message, 15, 10),
-                        Encoding.UTF8.GetString(message, 25, 3),
-                        Encoding.UTF8.GetString(message, 30, modelLength),
-                        BitConverter.ToUInt16(message, 30 + modelLength),
-                        BitConverter.ToUInt16(message, 32 + modelLength),
-                        BitConverter.ToUInt16(message, 34 + modelLength)
-                    );
-                }
-            },
-            {
-                "NAI", message =>
+                    "NPP", message =>
+                    {
+                        ushort modelLength = BitConverter.ToUInt16(message, 28);
+                        return new PassengerPlane(
+                            BitConverter.ToUInt64(message, 7),
+                            Encoding.UTF8.GetString(message, 15, 10),
+                            Encoding.UTF8.GetString(message, 25, 3),
+                            Encoding.UTF8.GetString(message, 30, modelLength),
+                            BitConverter.ToUInt16(message, 30 + modelLength),
+                            BitConverter.ToUInt16(message, 32 + modelLength),
+                            BitConverter.ToUInt16(message, 34 + modelLength)
+                        );
+                    }
+                },
                 {
-                    ushort nameLength = BitConverter.ToUInt16(message, 15);
-                    return new Airport(
-                        BitConverter.ToUInt64(message, 7),
-                        Encoding.UTF8.GetString(message, 17, nameLength),
-                        Encoding.ASCII.GetString(message, 17 + nameLength, 3),
-                        BitConverter.ToSingle(message, 20 + nameLength),
-                        BitConverter.ToSingle(message, 24 + nameLength),
-                        BitConverter.ToSingle(message, 28 + nameLength),
-                        Encoding.ASCII.GetString(message, 32 + nameLength, 3)
-                    );
-                }
-            },
-            {
-                "NFL", message =>
+                    "NAI", message =>
+                    {
+                        ushort nameLength = BitConverter.ToUInt16(message, 15);
+                        return new Airport(
+                            BitConverter.ToUInt64(message, 7),
+                            Encoding.UTF8.GetString(message, 17, nameLength),
+                            Encoding.ASCII.GetString(message, 17 + nameLength, 3),
+                            BitConverter.ToSingle(message, 20 + nameLength),
+                            BitConverter.ToSingle(message, 24 + nameLength),
+                            BitConverter.ToSingle(message, 28 + nameLength),
+                            Encoding.ASCII.GetString(message, 32 + nameLength, 3)
+                        );
+                    }
+                },
                 {
-                    return new Flight(
-                        BitConverter.ToUInt64(message, 7),
-                        BitConverter.ToUInt64(message, 15),
-                        BitConverter.ToUInt64(message, 23),
-                        DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 31)).ToString(),
-                        DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39)).ToString(),
-                        0, // Longitude
-                        0, // Latitude
-                        0, // AMSL
-                        BitConverter.ToUInt64(message, 47),
-                        Enumerable.Range(0, BitConverter.ToUInt16(message, 55)).Select(i => BitConverter.ToUInt64(message, 57 + (8 * i))).ToArray(),
-                        Enumerable.Range(0, BitConverter.ToUInt16(message, 57 + (8 * BitConverter.ToUInt16(message, 55)))).Select(i => BitConverter.ToUInt64(message, 59 + (8 * BitConverter.ToUInt16(message, 55)) + (8 * i))).ToArray()
-                    );
-                }
-            },
-        };
+                    "NFL", message =>
+                    {
+                        return new Flight(
+                            BitConverter.ToUInt64(message, 7),
+                            BitConverter.ToUInt64(message, 15),
+                            BitConverter.ToUInt64(message, 23),
+                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 31)).ToString(),
+                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39)).ToString(),
+                            0, // Longitude
+                            0, // Latitude
+                            0, // AMSL
+                            BitConverter.ToUInt64(message, 47),
+                            Enumerable.Range(0, BitConverter.ToUInt16(message, 55))
+                                .Select(i => BitConverter.ToUInt64(message, 57 + (8 * i))).ToArray(),
+                            Enumerable
+                                .Range(0, BitConverter.ToUInt16(message, 57 + (8 * BitConverter.ToUInt16(message, 55))))
+                                .Select(i => BitConverter.ToUInt64(message,
+                                    59 + (8 * BitConverter.ToUInt16(message, 55)) + (8 * i))).ToArray()
+                        );
+                    }
+                },
+            };
     }
 }
