@@ -11,8 +11,8 @@ namespace OOD_24L_01180686.source.ServerActions
         public static List<object> Objects = new List<object>();
         public static bool IsRunning = false;
         public static string Filepath;
-        public static int MaxDelay = 0;
-        public static int MinDelay = 0;
+        public static int MaxDelay = 1000;
+        public static int MinDelay = 100;
 
         public Server(string filepath)
         {
@@ -46,7 +46,6 @@ namespace OOD_24L_01180686.source.ServerActions
         public static void ServerOnNewDataReady(object sender, NewDataReadyArgs e)
         {
             Message message = server.GetMessageAt(e.MessageIndex);
-            //Console.WriteLine("New message received.");
             Objects.Add(MessageParser(message));
             
         }
