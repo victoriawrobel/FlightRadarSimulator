@@ -1,6 +1,7 @@
 ﻿using OOD_24L_01180686.source.Objects;
 using System.Text;
 
+
 namespace OOD_24L_01180686.source.Readers
 {
     internal static class Reader
@@ -64,7 +65,7 @@ namespace OOD_24L_01180686.source.Readers
                         return new Crew(
                             BitConverter.ToUInt64(message, 7),
                             Encoding.ASCII.GetString(message, 17, BitConverter.ToUInt16(message, 15)),
-                            BitConverter.ToUInt64(message, 17 + BitConverter.ToUInt16(message, 15)),
+                            BitConverter.ToUInt16(message, 17 + BitConverter.ToUInt16(message, 15)),
                             Encoding.ASCII.GetString(message, 19 + BitConverter.ToUInt16(message, 15), 12),
                             Encoding.ASCII.GetString(message, 33 + BitConverter.ToUInt16(message, 15),
                                 BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
@@ -84,7 +85,7 @@ namespace OOD_24L_01180686.source.Readers
                         return new Passenger(
                             BitConverter.ToUInt64(message, 7),
                             Encoding.ASCII.GetString(message, 17, BitConverter.ToUInt16(message, 15)),
-                            BitConverter.ToUInt64(message, 17 + BitConverter.ToUInt16(message, 15)),
+                            BitConverter.ToUInt16(message, 17 + BitConverter.ToUInt16(message, 15)),
                             Encoding.ASCII.GetString(message, 19 + BitConverter.ToUInt16(message, 15), 12),
                             Encoding.ASCII.GetString(message, 33 + BitConverter.ToUInt16(message, 15),
                                 BitConverter.ToUInt16(message, 31 + BitConverter.ToUInt16(message, 15))),
@@ -150,23 +151,24 @@ namespace OOD_24L_01180686.source.Readers
                 {
                     "NFL", message =>
                     {
-                        return new Flight(
-                            BitConverter.ToUInt64(message, 7),
-                            BitConverter.ToUInt64(message, 15),
-                            BitConverter.ToUInt64(message, 23),
-                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 31)).ToString(),
-                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39)).ToString().Replace(" \\u002B00:00", ""),
-                            0, // Longitude
-                            0, // Latitude
-                            0, // AMSL
-                            BitConverter.ToUInt64(message, 47),
-                            Enumerable.Range(0, BitConverter.ToUInt16(message, 55))
-                                .Select(i => BitConverter.ToUInt64(message, 57 + (8 * i))).ToArray(),
-                            Enumerable
+                        uint messageLength = BitConverter.ToUInt32(message, 3);
+                        ulong id = BitConverter.ToUInt64(message, 7);
+                        ulong originID = BitConverter.ToUInt64(message, 15);
+                        ulong targetID = BitConverter.ToUInt64(message, 23);
+                        DateTimeOffset takeOffTimeDate = DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 31));
+                        DateTimeOffset landingTimeDate = DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39));
+                        string takeOffTime = takeOffTimeDate.ToString("yyyy-MM-dd HH:mm:ss");
+                        string landingTime = landingTimeDate.ToString("yyyy-MM-dd HH:mm:ss");
+                        ulong planeID = BitConverter.ToUInt64(message, 47);
+                        ulong[] crewID = Enumerable.Range(0, BitConverter.ToUInt16(message, 55))
+                                .Select(i => BitConverter.ToUInt64(message, 57 + (8 * i))).ToArray();
+                        ulong[] loadID = Enumerable
                                 .Range(0, BitConverter.ToUInt16(message, 57 + (8 * BitConverter.ToUInt16(message, 55))))
                                 .Select(i => BitConverter.ToUInt64(message,
-                                    59 + (8 * BitConverter.ToUInt16(message, 55)) + (8 * i))).ToArray()
-                        );
+                                    59 + (8 * BitConverter.ToUInt16(message, 55)) + (8 * i))).ToArray();
+
+                        return new Flight(id, originID, targetID, takeOffTime, landingTime, 0, 0, 0,
+                        planeID, crewID, loadID);
                     }
                 },
             };

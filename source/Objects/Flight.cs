@@ -64,12 +64,25 @@ namespace OOD_24L_01180686.source.Objects
         public float GetProgress()
         {
             DateTime currentTime = DateTime.Now;
-            int takeOffIndex = TakeOffTime.IndexOf('M');
-            DateTime takeOff = DateTime.Parse(TakeOffTime.Substring(0, takeOffIndex + 1));
-            int landingIndex = LandingTime.IndexOf('M');
-            DateTime landing = DateTime.Parse(LandingTime.Substring(0, landingIndex + 1));
-            
-            return ((float) (currentTime - takeOff).TotalSeconds) / ((float)(landing - takeOff).TotalSeconds);
+            DateTime takeOff = DateTime.Parse(TakeOffTime);
+            DateTime landing = DateTime.Parse(LandingTime);
+
+            TimeSpan elapsedTime = currentTime - takeOff;
+            TimeSpan totalDuration = landing - takeOff;
+
+            if (elapsedTime < TimeSpan.Zero)
+            {
+                return 0.0f;
+            }
+            else if (elapsedTime >= totalDuration)
+            {
+                return 1.0f;
+            }
+            else
+            {
+                return (float)(elapsedTime.TotalSeconds / totalDuration.TotalSeconds);
+            }
+
         }
 
         public float GetRotation()

@@ -1,5 +1,6 @@
 ﻿using OOD_24L_01180686.source.Writers;
 using OOD_24L_01180686.source.Objects;
+using OOD_24L_01180686.source.ObjectsCollection;
 
 
 namespace OOD_24L_01180686.source.Network
@@ -8,51 +9,33 @@ namespace OOD_24L_01180686.source.Network
     {
         public static void CommandHandler(Server server)
         {
+            server.StartServer();
             while (true)
             {
                 string input = Console.ReadLine();
-                if (input.ToLower() == "start")
+
+                if (input.ToLower() == "print")
                 {
-                    if (!Server.IsRunning)
-                    {
-                        server.StartServer();
-                    }
-                    else
-                    {
-                        Console.WriteLine("Server is already running.");
-                    }
-                }
-                else if (input.ToLower() == "print")
-                {
-                    if (Server.IsRunning)
-                    {
+
                         Console.WriteLine("Creating a snapshot...");
-                        foreach(var obj in Server.Objects)
+                        foreach(var obj in ObjectsCollection.ObjectsCollection.GetObjects())
                         {
                             if(obj is Flight flight)
                             {
                                 flight.UpdatePosition();
                             }
                         }
-                        Console.WriteLine("Objects count: " + Server.Objects.Count());
+                        Console.WriteLine("Objects count: " + ObjectsCollection.ObjectsCollection.GetObjects().Count());
                         JSONWriter writer = new JSONWriter();
-                        writer.WriteData(Server.Objects,
+                        writer.WriteData(ObjectsCollection.ObjectsCollection.GetObjects(),
                             Directory.GetCurrentDirectory() +
                             $"..\\..\\..\\..\\DataFiles\\snapshot_{DateTime.Now:HH_mm_ss}.json");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Server is not running.");
-                    }
+
                 }
                 else if (input.ToLower() == "exit")
                 {
-                    if (Server.IsRunning)
-                    {
-                        server.StopServer().Wait();
-                        Console.WriteLine("Server stopped.");
-                    }
-
+                    server.StopServer().Wait();
+                    Console.WriteLine("Server stopped.");
                     break;
                 }
                 else

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FlightTrackerGUI;
+﻿using FlightTrackerGUI;
 using OOD_24L_01180686.source.Objects;
 
 namespace OOD_24L_01180686.source.Adapters

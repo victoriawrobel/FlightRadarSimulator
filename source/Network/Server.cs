@@ -2,6 +2,7 @@
 using OOD_24L_01180686.source.Readers;
 using System.Text;
 using OOD_24L_01180686.source.Objects;
+using OOD_24L_01180686.source.ObjectsCollection;
 
 namespace OOD_24L_01180686.source.Network
 {
@@ -9,8 +10,7 @@ namespace OOD_24L_01180686.source.Network
     {
         private NetworkSourceSimulator.NetworkSourceSimulator server;
         private static Server serverInstance;
-        public static List<object> Objects = new List<object>();
-        internal static bool IsRunning = false;
+        
         private static object serverLock = new object();
         private string Filepath;
         private int MaxDelay = 0;
@@ -41,7 +41,6 @@ namespace OOD_24L_01180686.source.Network
                 throw new FileNotFoundException($"File {Filepath} not found");
             }
 
-            IsRunning = true;
             Console.WriteLine("Server started.");
             server = new NetworkSourceSimulator.NetworkSourceSimulator(Filepath, MinDelay, MaxDelay);
             server.OnNewDataReady += ServerOnNewDataReady;
@@ -49,13 +48,8 @@ namespace OOD_24L_01180686.source.Network
         }
 
         public Task StopServer()
-        {
-            if (IsRunning)
-            {
-                IsRunning = false;
-                Console.WriteLine("Server stopping...");
-            }
-
+        { 
+            Console.WriteLine("Server stopping...");
             return Task.CompletedTask;
         }
 
@@ -63,7 +57,7 @@ namespace OOD_24L_01180686.source.Network
         {
             var message = server.GetMessageAt(e.MessageIndex);
             var obj = MessageParser(message);
-            Objects.Add(obj);
+            ObjectsCollection.ObjectsCollection.AddObject(obj);
             if (obj is Entity entity)
             {
                 EntitySearch.AddObject(entity);

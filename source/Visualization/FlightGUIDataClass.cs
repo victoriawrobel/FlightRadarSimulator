@@ -1,9 +1,9 @@
-﻿using OOD_24L_01180686.source.Network;
-using OOD_24L_01180686.source.Objects;
+﻿using OOD_24L_01180686.source.Objects;
 using FlightTrackerGUI;
 using OOD_24L_01180686.source.Adapters;
+using OOD_24L_01180686.source.ObjectsCollection;
 
-namespace OOD_24L_01180686.source.FlightGUI_Implement
+namespace OOD_24L_01180686.source.Visualization
 {
     public class FlightGUIDataClass : FlightsGUIData
     {
@@ -18,7 +18,7 @@ namespace OOD_24L_01180686.source.FlightGUI_Implement
         {
             List<FlightGUI> flightGUIs = new List<FlightGUI>();
 
-            foreach (var obj in Server.Objects)
+            foreach (var obj in ObjectsCollection.ObjectsCollection.GetObjects())
             {
                 if (obj is Flight flight)
                 {
