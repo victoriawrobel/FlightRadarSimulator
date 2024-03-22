@@ -9,6 +9,11 @@
 
   <ItemGroup>
     <Folder Include="source\NetworkDataSource\" />
+    <Folder Include="source\Nuget\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FlightTrackerGUI" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

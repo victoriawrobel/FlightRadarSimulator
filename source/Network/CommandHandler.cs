@@ -1,4 +1,5 @@
 ﻿using OOD_24L_01180686.source.Writers;
+using OOD_24L_01180686.source.Objects;
 
 
 namespace OOD_24L_01180686.source.Network
@@ -26,6 +27,13 @@ namespace OOD_24L_01180686.source.Network
                     if (Server.IsRunning)
                     {
                         Console.WriteLine("Creating a snapshot...");
+                        foreach(var obj in Server.Objects)
+                        {
+                            if(obj is Flight flight)
+                            {
+                                flight.UpdatePosition();
+                            }
+                        }
                         Console.WriteLine("Objects count: " + Server.Objects.Count());
                         JSONWriter writer = new JSONWriter();
                         writer.WriteData(Server.Objects,

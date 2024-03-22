@@ -1,4 +1,7 @@
-﻿
+﻿using FlightTrackerGUI;
+using System;
+
+
 namespace OOD_24L_01180686.source.Objects
 {
     public class Flight : Entity
@@ -27,6 +30,59 @@ namespace OOD_24L_01180686.source.Objects
             this.PlaneID = planeID;
             this.CrewID = crewID;
             this.LoadID = loadID;
+        }
+
+        public void UpdatePosition()
+        {
+            if(EntitySearch.GetObject(OriginID) is Airport origin && EntitySearch.GetObject(TargetID) is Airport target)
+            {
+                if(GetProgress() < 1 && GetProgress() > 0)
+                {
+                    Longitude = origin.Longitude + (target.Longitude - origin.Longitude) * GetProgress();
+                    Latitude = origin.Latitude + (target.Latitude - origin.Latitude) * GetProgress();
+                    AMSL = origin.AMSL + (target.AMSL - origin.AMSL) * GetProgress();
+                }
+                else if(GetProgress() <= 0)
+                {
+                    Longitude = origin.Longitude;
+                    Latitude = origin.Latitude;
+                    AMSL = origin.AMSL;
+                }
+                else if(GetProgress() >= 1)
+                {
+                    Longitude = target.Longitude;
+                    Latitude = target.Latitude;
+                    AMSL = target.AMSL;
+                }
+            }
+            else
+            {
+                throw new KeyNotFoundException("Origin or target not found.");
+            }
+        }
+
+        public float GetProgress()
+        {
+            DateTime currentTime = DateTime.Now;
+            int takeOffIndex = TakeOffTime.IndexOf('M');
+            DateTime takeOff = DateTime.Parse(TakeOffTime.Substring(0, takeOffIndex + 1));
+            int landingIndex = LandingTime.IndexOf('M');
+            DateTime landing = DateTime.Parse(LandingTime.Substring(0, landingIndex + 1));
+            
+            return ((float) (currentTime - takeOff).TotalSeconds) / ((float)(landing - takeOff).TotalSeconds);
+        }
+
+        public float GetRotation()
+        {
+            if (EntitySearch.GetObject(OriginID) is Airport origin && EntitySearch.GetObject(TargetID) is Airport target)
+            {
+                float x = target.Longitude - origin.Longitude;
+                float y = target.Latitude - origin.Latitude;
+                
+                float rotation = (float) Math.Atan2(x,y);
+                return rotation;
+            }
+            return 0.0f;
         }
 
         public override string ToString()

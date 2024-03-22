@@ -1,6 +1,7 @@
 ﻿using NetworkSourceSimulator;
 using OOD_24L_01180686.source.Readers;
 using System.Text;
+using OOD_24L_01180686.source.Objects;
 
 namespace OOD_24L_01180686.source.Network
 {
@@ -12,8 +13,8 @@ namespace OOD_24L_01180686.source.Network
         internal static bool IsRunning = false;
         private static object serverLock = new object();
         private string Filepath;
-        private int MaxDelay = 100;
-        private int MinDelay = 10;
+        private int MaxDelay = 0;
+        private int MinDelay = 0;
 
         private Server(string filepath)
         {
@@ -61,7 +62,12 @@ namespace OOD_24L_01180686.source.Network
         private void ServerOnNewDataReady(object sender, NewDataReadyArgs e)
         {
             var message = server.GetMessageAt(e.MessageIndex);
-            Objects.Add(MessageParser(message));
+            var obj = MessageParser(message);
+            Objects.Add(obj);
+            if (obj is Entity entity)
+            {
+                EntitySearch.AddObject(entity);
+            }
         }
 
         private static object MessageParser(Message message)

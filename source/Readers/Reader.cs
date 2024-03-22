@@ -155,7 +155,7 @@ namespace OOD_24L_01180686.source.Readers
                             BitConverter.ToUInt64(message, 15),
                             BitConverter.ToUInt64(message, 23),
                             DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 31)).ToString(),
-                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39)).ToString(),
+                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39)).ToString().Replace(" \\u002B00:00", ""),
                             0, // Longitude
                             0, // Latitude
                             0, // AMSL
