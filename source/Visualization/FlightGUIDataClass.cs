@@ -1,41 +1,42 @@
 ﻿using OOD_24L_01180686.source.Objects;
 using FlightTrackerGUI;
 using OOD_24L_01180686.source.Adapters;
-using OOD_24L_01180686.source.ObjectsCollection;
 
 namespace OOD_24L_01180686.source.Visualization
 {
     public class FlightGUIDataClass : FlightsGUIData
     {
-        private List<FlightGUI> flightsData;
+        private static List<FlightGUI> flightsData { get; set; }
 
-        public FlightGUIDataClass(List<FlightGUI> flightsData)
+        public FlightGUIDataClass(List<FlightGUI> FlightsData)
         {
-            this.flightsData = flightsData;
+            flightsData = FlightsData;
         }
 
         public static void UpdateFlightsGUI()
         {
-            List<FlightGUI> flightGUIs = new List<FlightGUI>();
-
+            flightsData.Clear();
             foreach (var obj in ObjectsCollection.ObjectsCollection.GetObjects())
             {
                 if (obj is Flight flight)
                 {
                     flight.UpdatePosition();
-                    if(flight.GetProgress() < 1 && flight.GetProgress() > 0)
-                        flightGUIs.Add(FlightToFlightGUIAdapter.FLightGUIAdapter(flight));
+                    if (flight.GetProgress() < 1 && flight.GetProgress() > 0)
+                    {
+                        Console.WriteLine("Flight ID: " + flight.ID + " is in progress.");
+                        flightsData.Add(new FlightGUIAdapter(flight));
+                    }
                 }
             }
-
-            FlightsGUIData flightsGUIData = new FlightGUIDataClass(flightGUIs);
-            Runner.UpdateGUI(flightsGUIData);
+            Console.WriteLine("flightData count: " + flightsData.Count);
         }
+
         public override int GetFlightsCount()
         {
             return flightsData.Count;
         }
 
+        
         public override ulong GetID(int index)
         {
             if (index >= 0 && index < flightsData.Count)
@@ -47,6 +48,7 @@ namespace OOD_24L_01180686.source.Visualization
                 return 0;
             }
         }
+
 
         public override WorldPosition GetPosition(int index)
         {

@@ -14,12 +14,14 @@ namespace OOD_24L_01180686.source
             var file = Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1.ftr";
             IDataWrite dataWrite = new JSONWriter();
             Server.GetInstance(file);
+            FlightGUIDataClass flightGUIData = new FlightGUIDataClass(new List<FlightGUI>());
             Thread updater = new Thread(() =>
             {
                 while (true)
                 {
 
                     FlightGUIDataClass.UpdateFlightsGUI();
+                    Runner.UpdateGUI(flightGUIData);
                     Thread.Sleep(TimeSpan.FromSeconds(1));
                 }
             });

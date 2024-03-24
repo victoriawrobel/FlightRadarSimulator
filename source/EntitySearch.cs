@@ -14,7 +14,6 @@ namespace OOD_24L_01180686.source
         public static void AddObject(Entity e)
         {
             EntitySearchDictionary.Add(e.ID, e);
-            Console.WriteLine($"Added object with ID {e.ID} to EntitySearchDictionary.");
         }
 
         public static object GetObject(ulong ID)
