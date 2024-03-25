@@ -1,16 +1,14 @@
 ﻿using OOD_24L_01180686.source.Objects;
 using FlightTrackerGUI;
-using OOD_24L_01180686.source.Adapters;
 
 namespace OOD_24L_01180686.source.Visualization
 {
     public class FlightGUIDataClass : FlightsGUIData
     {
-        private static List<FlightGUI> flightsData { get; set; }
+        private static List<Flight> flightsData = new List<Flight>();
 
-        public FlightGUIDataClass(List<FlightGUI> FlightsData)
+        public FlightGUIDataClass()
         {
-            flightsData = FlightsData;
         }
 
         public static void UpdateFlightsGUI()
@@ -23,12 +21,10 @@ namespace OOD_24L_01180686.source.Visualization
                     flight.UpdatePosition();
                     if (flight.GetProgress() < 1 && flight.GetProgress() > 0)
                     {
-                        Console.WriteLine("Flight ID: " + flight.ID + " is in progress.");
-                        flightsData.Add(new FlightGUIAdapter(flight));
+                        flightsData.Add(flight);
                     }
                 }
             }
-            Console.WriteLine("flightData count: " + flightsData.Count);
         }
 
         public override int GetFlightsCount()
@@ -54,7 +50,7 @@ namespace OOD_24L_01180686.source.Visualization
         {
             if (index >= 0 && index < flightsData.Count)
             {
-                return flightsData[index].WorldPosition;
+                return new WorldPosition(flightsData[index].Latitude, flightsData[index].Longitude);
             }
             else
             {
@@ -66,7 +62,7 @@ namespace OOD_24L_01180686.source.Visualization
         {
             if (index >= 0 && index < flightsData.Count)
             {
-                return flightsData[index].MapCoordRotation;
+                return flightsData[index].GetRotation();
             }
             else
             {
