@@ -32,7 +32,7 @@ namespace OOD_24L_01180686.source.Visualization
             return flightsData.Count;
         }
 
-        
+
         public override ulong GetID(int index)
         {
             if (index >= 0 && index < flightsData.Count)
@@ -69,6 +69,5 @@ namespace OOD_24L_01180686.source.Visualization
                 return 0;
             }
         }
-
     }
 }

@@ -155,20 +155,22 @@ namespace OOD_24L_01180686.source.Readers
                         ulong id = BitConverter.ToUInt64(message, 7);
                         ulong originID = BitConverter.ToUInt64(message, 15);
                         ulong targetID = BitConverter.ToUInt64(message, 23);
-                        DateTimeOffset takeOffTimeDate = DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 31));
-                        DateTimeOffset landingTimeDate = DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39));
+                        DateTimeOffset takeOffTimeDate =
+                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 31));
+                        DateTimeOffset landingTimeDate =
+                            DateTimeOffset.FromUnixTimeMilliseconds(BitConverter.ToInt64(message, 39));
                         string takeOffTime = takeOffTimeDate.ToString("yyyy-MM-dd HH:mm:ss");
                         string landingTime = landingTimeDate.ToString("yyyy-MM-dd HH:mm:ss");
                         ulong planeID = BitConverter.ToUInt64(message, 47);
                         ulong[] crewID = Enumerable.Range(0, BitConverter.ToUInt16(message, 55))
-                                .Select(i => BitConverter.ToUInt64(message, 57 + (8 * i))).ToArray();
+                            .Select(i => BitConverter.ToUInt64(message, 57 + (8 * i))).ToArray();
                         ulong[] loadID = Enumerable
-                                .Range(0, BitConverter.ToUInt16(message, 57 + (8 * BitConverter.ToUInt16(message, 55))))
-                                .Select(i => BitConverter.ToUInt64(message,
-                                    59 + (8 * BitConverter.ToUInt16(message, 55)) + (8 * i))).ToArray();
+                            .Range(0, BitConverter.ToUInt16(message, 57 + (8 * BitConverter.ToUInt16(message, 55))))
+                            .Select(i => BitConverter.ToUInt64(message,
+                                59 + (8 * BitConverter.ToUInt16(message, 55)) + (8 * i))).ToArray();
 
                         return new Flight(id, originID, targetID, takeOffTime, landingTime, 0, 0, 0,
-                        planeID, crewID, loadID);
+                            planeID, crewID, loadID);
                     }
                 },
             };

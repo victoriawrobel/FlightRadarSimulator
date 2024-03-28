@@ -34,21 +34,22 @@ namespace OOD_24L_01180686.source.Objects
 
         public void UpdatePosition()
         {
-            if(EntitySearch.GetObject(OriginID) is Airport origin && EntitySearch.GetObject(TargetID) is Airport target)
+            if (EntitySearch.GetObject(OriginID) is Airport origin &&
+                EntitySearch.GetObject(TargetID) is Airport target)
             {
-                if(GetProgress() < 1 && GetProgress() > 0)
+                if (GetProgress() < 1 && GetProgress() > 0)
                 {
                     Longitude = origin.Longitude + (target.Longitude - origin.Longitude) * GetProgress();
                     Latitude = origin.Latitude + (target.Latitude - origin.Latitude) * GetProgress();
                     AMSL = origin.AMSL + (target.AMSL - origin.AMSL) * GetProgress();
                 }
-                else if(GetProgress() <= 0)
+                else if (GetProgress() <= 0)
                 {
                     Longitude = origin.Longitude;
                     Latitude = origin.Latitude;
                     AMSL = origin.AMSL;
                 }
-                else if(GetProgress() >= 1)
+                else if (GetProgress() >= 1)
                 {
                     Longitude = target.Longitude;
                     Latitude = target.Latitude;
@@ -82,19 +83,20 @@ namespace OOD_24L_01180686.source.Objects
             {
                 return (float)(elapsedTime.TotalSeconds / totalDuration.TotalSeconds);
             }
-
         }
 
         public float GetRotation()
         {
-            if (EntitySearch.GetObject(OriginID) is Airport origin && EntitySearch.GetObject(TargetID) is Airport target)
+            if (EntitySearch.GetObject(OriginID) is Airport origin &&
+                EntitySearch.GetObject(TargetID) is Airport target)
             {
                 float x = target.Longitude - origin.Longitude;
                 float y = target.Latitude - origin.Latitude;
-                
-                float rotation = (float) Math.Atan2(x,y);
+
+                float rotation = (float)Math.Atan2(x, y);
                 return rotation;
             }
+
             return 0.0f;
         }
 

@@ -13,7 +13,7 @@ namespace OOD_24L_01180686.source.ObjectsCollection
 
         public static void AddObject(object obj)
         {
-            lock(lockObject)
+            lock (lockObject)
             {
                 Objects.Add(obj);
             }
@@ -21,7 +21,7 @@ namespace OOD_24L_01180686.source.ObjectsCollection
 
         public static List<object> GetObjects()
         {
-            lock(lockObject)
+            lock (lockObject)
             {
                 return Objects;
             }

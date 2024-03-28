@@ -9,35 +9,29 @@ namespace OOD_24L_01180686.source
     {
         public static void Main(string[] args)
         {
-            Thread thread = new Thread(() => Runner.Run());
+            Thread thread = new Thread(() =>
+            {
+                try
+                {
+                    Runner.Run();
+                }
+                catch (ThreadInterruptedException)
+                {
+                    Console.WriteLine("Runner thread interrupted.");
+                }
+            });
             thread.Start();
             var file = Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1.ftr";
             IDataWrite dataWrite = new JSONWriter();
             Server.GetInstance(file);
             FlightGUIDataClass flightGUIData = new FlightGUIDataClass();
-            Thread updater = new Thread(() =>
-            {
-                while (true)
-                {
-                    try
-                    {
-                        FlightGUIDataClass.UpdateFlightsGUI();
-                        Runner.UpdateGUI(flightGUIData);
-                        Thread.Sleep(TimeSpan.FromSeconds(1));
-                    }
-                    catch (ThreadInterruptedException)
-                    {
-                        Console.WriteLine("FlightGUI updater interrupted.");
-                        break;
-                    }
-                }
-            }
-            );
-            updater.Start();
+            var flightGUIThread = new FlightGUIThread(flightGUIData);
+            flightGUIThread.Start();
 
             CommandHandlerClass.CommandHandler(Server.GetInstance(file));
-            updater.Interrupt();
+            flightGUIThread.Stop();
 
+            thread.Interrupt();
             Console.WriteLine("Main thread exited.");
         }
     }

@@ -22,6 +22,7 @@ namespace OOD_24L_01180686.source
             {
                 return entity;
             }
+
             throw new KeyNotFoundException($"Object with ID {ID} not found.");
         }
     }

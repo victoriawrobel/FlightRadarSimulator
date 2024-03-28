@@ -16,21 +16,20 @@ namespace OOD_24L_01180686.source.Network
 
                 if (input.ToLower() == "print")
                 {
-
-                        Console.WriteLine("Creating a snapshot...");
-                        foreach(var obj in ObjectsCollection.ObjectsCollection.GetObjects())
+                    Console.WriteLine("Creating a snapshot...");
+                    foreach (var obj in ObjectsCollection.ObjectsCollection.GetObjects())
+                    {
+                        if (obj is Flight flight)
                         {
-                            if(obj is Flight flight)
-                            {
-                                flight.UpdatePosition();
-                            }
+                            flight.UpdatePosition();
                         }
-                        Console.WriteLine("Objects count: " + ObjectsCollection.ObjectsCollection.GetObjects().Count());
-                        JSONWriter writer = new JSONWriter();
-                        writer.WriteData(ObjectsCollection.ObjectsCollection.GetObjects(),
-                            Directory.GetCurrentDirectory() +
-                            $"..\\..\\..\\..\\DataFiles\\snapshot_{DateTime.Now:HH_mm_ss}.json");
+                    }
 
+                    Console.WriteLine("Objects count: " + ObjectsCollection.ObjectsCollection.GetObjects().Count());
+                    JSONWriter writer = new JSONWriter();
+                    writer.WriteData(ObjectsCollection.ObjectsCollection.GetObjects(),
+                        Directory.GetCurrentDirectory() +
+                        $"..\\..\\..\\..\\DataFiles\\snapshot_{DateTime.Now:HH_mm_ss}.json");
                 }
                 else if (input.ToLower() == "exit")
                 {
