@@ -1,6 +1,6 @@
 ﻿using OOD_24L_01180686.source.Writers;
 using OOD_24L_01180686.source.Objects;
-using OOD_24L_01180686.source.ObjectsCollection;
+using OOD_24L_01180686.source.Reports;
 
 
 namespace OOD_24L_01180686.source.Network
@@ -10,6 +10,7 @@ namespace OOD_24L_01180686.source.Network
         public static void CommandHandler(Server server)
         {
             server.StartServer();
+            NewsGenerator newsGenerator = new NewsGenerator(EntitySearch.GetReporters(), EntitySearch.GetReportables());
             while (true)
             {
                 string input = Console.ReadLine();
@@ -17,19 +18,26 @@ namespace OOD_24L_01180686.source.Network
                 if (input.ToLower() == "print")
                 {
                     Console.WriteLine("Creating a snapshot...");
-                    foreach (var obj in ObjectsCollection.ObjectsCollection.GetObjects())
+                    foreach (var obj in EntitySearch.GetFlights())
                     {
-                        if (obj is Flight flight)
+                        if ((Flight)obj != null)
                         {
-                            flight.UpdatePosition();
+                            ((Flight)obj).UpdatePosition();
                         }
                     }
 
-                    Console.WriteLine("Objects count: " + ObjectsCollection.ObjectsCollection.GetObjects().Count());
+                    Console.WriteLine("Objects count: " + EntitySearch.GetObjects().Count());
                     JSONWriter writer = new JSONWriter();
-                    writer.WriteData(ObjectsCollection.ObjectsCollection.GetObjects(),
+                    writer.WriteData(EntitySearch.GetObjects(),
                         Directory.GetCurrentDirectory() +
                         $"..\\..\\..\\..\\DataFiles\\snapshot_{DateTime.Now:HH_mm_ss}.json");
+                }
+                else if (input.ToLower() == "report")
+                {
+                    foreach (var news in newsGenerator)
+                    {
+                        Console.WriteLine(news);
+                    }
                 }
                 else if (input.ToLower() == "exit")
                 {

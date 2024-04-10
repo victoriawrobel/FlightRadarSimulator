@@ -34,9 +34,11 @@ namespace OOD_24L_01180686.source.Objects
 
         public void UpdatePosition()
         {
-            if (EntitySearch.GetObject(OriginID) is Airport origin &&
-                EntitySearch.GetObject(TargetID) is Airport target)
+            if ((Airport)EntitySearch.GetObject(OriginID) != null &&
+                (Airport)EntitySearch.GetObject(TargetID) != null)
             {
+                Airport origin = (Airport)EntitySearch.GetObject(OriginID);
+                Airport target = (Airport)EntitySearch.GetObject(TargetID);
                 if (GetProgress() < 1 && GetProgress() > 0)
                 {
                     Longitude = origin.Longitude + (target.Longitude - origin.Longitude) * GetProgress();
@@ -87,9 +89,11 @@ namespace OOD_24L_01180686.source.Objects
 
         public float GetRotation()
         {
-            if (EntitySearch.GetObject(OriginID) is Airport origin &&
-                EntitySearch.GetObject(TargetID) is Airport target)
+            if ((Airport)EntitySearch.GetObject(OriginID) != null &&
+                (Airport)EntitySearch.GetObject(TargetID) != null)
             {
+                Airport origin = (Airport)EntitySearch.GetObject(OriginID);
+                Airport target = (Airport)EntitySearch.GetObject(TargetID);
                 float x = target.Longitude - origin.Longitude;
                 float y = target.Latitude - origin.Latitude;
 

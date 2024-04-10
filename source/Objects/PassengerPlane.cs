@@ -1,7 +1,9 @@
 ﻿
+using OOD_24L_01180686.source.Reports;
+
 namespace OOD_24L_01180686.source.Objects
 {
-    public class PassengerPlane : Plane
+    public class PassengerPlane : Plane, IReportable
     {
         public ushort FirstClassSize { get; protected set; }
         public ushort BusinessClassSize { get; protected set; }
@@ -19,6 +21,11 @@ namespace OOD_24L_01180686.source.Objects
         {
             return
                 $"PassengerPlane: {ID} {SerialNr} {CountryISO} {Model} {FirstClassSize} {BusinessClassSize} {EconomyClassSize}";
+        }
+
+        public string Accept(Reporter reporter)
+        {
+            return reporter.Visit(this);
         }
     }
 }

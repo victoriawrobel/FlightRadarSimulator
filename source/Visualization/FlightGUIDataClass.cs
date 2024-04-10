@@ -14,10 +14,11 @@ namespace OOD_24L_01180686.source.Visualization
         public static void UpdateFlightsGUI()
         {
             flightsData.Clear();
-            foreach (var obj in ObjectsCollection.ObjectsCollection.GetObjects())
+            foreach (var obj in EntitySearch.GetFlights())
             {
-                if (obj is Flight flight)
+                if ((Flight)obj != null)
                 {
+                    Flight flight = (Flight)obj;
                     flight.UpdatePosition();
                     if (flight.GetProgress() < 1 && flight.GetProgress() > 0)
                     {

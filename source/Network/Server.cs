@@ -2,7 +2,7 @@
 using OOD_24L_01180686.source.Readers;
 using System.Text;
 using OOD_24L_01180686.source.Objects;
-using OOD_24L_01180686.source.ObjectsCollection;
+using OOD_24L_01180686.source.Reports;
 
 namespace OOD_24L_01180686.source.Network
 {
@@ -57,10 +57,20 @@ namespace OOD_24L_01180686.source.Network
         {
             var message = server.GetMessageAt(e.MessageIndex);
             var obj = MessageParser(message);
-            ObjectsCollection.ObjectsCollection.AddObject(obj);
-            if (obj is Entity entity)
+            EntitySearch.AddObject(obj);
+            if ((Entity)obj != null)
             {
-                EntitySearch.AddObject(entity);
+                EntitySearch.AddObject((Entity)obj);
+            }
+
+            if (obj as Flight != null)
+            {
+                EntitySearch.AddFlight(obj as Flight);
+            }
+
+            if (obj as IReportable != null)
+            {
+                EntitySearch.AddReportable(obj as IReportable);
             }
         }
 

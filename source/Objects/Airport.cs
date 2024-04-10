@@ -1,7 +1,9 @@
 ﻿
+using OOD_24L_01180686.source.Reports;
+
 namespace OOD_24L_01180686.source.Objects
 {
-    public class Airport : Entity
+    public class Airport : Entity, IReportable
     {
         public string Name { get; protected set; }
         public string Code { get; protected set; }
@@ -24,6 +26,11 @@ namespace OOD_24L_01180686.source.Objects
         public override string ToString()
         {
             return $"Airport: {ID} {Name} {Code} {Longitude} {Latitude} {AMSL} {CountryISO}";
+        }
+
+        public string Accept(Reporter reporter)
+        {
+            return reporter.Visit(this);
         }
     }
 }

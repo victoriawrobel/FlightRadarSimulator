@@ -1,7 +1,9 @@
 ﻿
+using OOD_24L_01180686.source.Reports;
+
 namespace OOD_24L_01180686.source.Objects
 {
-    public class CargoPlane : Plane
+    public class CargoPlane : Plane, IReportable
     {
         public float MaxLoad { get; protected set; }
 
@@ -13,6 +15,11 @@ namespace OOD_24L_01180686.source.Objects
         public override string ToString()
         {
             return $"CargoPlane: {ID} {SerialNr} {CountryISO} {Model} {MaxLoad}";
+        }
+
+        public string Accept(Reporter reporter)
+        {
+            return reporter.Visit(this);
         }
     }
 }
