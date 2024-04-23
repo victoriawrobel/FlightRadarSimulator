@@ -1,18 +1,16 @@
-﻿using OOD_24L_01180686.source.Objects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Xml.Serialization;
+using NetworkSourceSimulator;
+using OOD_24L_01180686.source.Objects;
 using OOD_24L_01180686.source.Reports;
+using OOD_24L_01180686.source.Updates;
 
 namespace OOD_24L_01180686.source
 {
-    internal interface EntitySearch
+    internal class EntitySearch : IObserver
     {
-        private static readonly Dictionary<ulong, Entity> EntitySearchDictionary = new Dictionary<ulong, Entity>();
+        internal static Dictionary<ulong, Entity> EntitySearchDictionary = new Dictionary<ulong, Entity>();
         private static List<object> Objects = new List<object>();
-        private static object lockObject = new object();
+        internal static object lockObject = new object();
 
         private static LinkedList<Flight> flightList = new LinkedList<Flight>();
         private static LinkedList<Reporter> reporterList = new LinkedList<Reporter>();
@@ -102,5 +100,60 @@ namespace OOD_24L_01180686.source
                 return Objects;
             }
         }
+
+        public void Update(IDUpdateArgs args)
+        {
+            if (EntitySearchDictionary.ContainsKey(args.NewObjectID) || !EntitySearchDictionary.ContainsKey(args.ObjectID))
+            {
+                return;
+            }
+            var obj = GetObject(args.ObjectID) as Entity;
+            if (obj != null)
+            {
+                lock (lockObject)
+                {
+                    var newObj = EntitySearchDictionary[args.ObjectID];
+                    EntitySearchDictionary.Remove(args.ObjectID);
+                    newObj.ID = args.NewObjectID;
+                    EntitySearchDictionary.Add(args.NewObjectID, newObj);
+                }
+            }
+        }
+
+        public void Update(PositionUpdateArgs args)
+        {
+            Entity entity = null;
+            if (EntitySearchDictionary.TryGetValue(args.ObjectID, out entity))
+            {
+                Flight flight = entity as Flight;
+                if (flight != null)
+                {
+                    lock (lockObject)
+                    {
+                        flight.Longitude = args.Longitude;
+                        flight.Latitude = args.Latitude;
+                        flight.AMSL = args.AMSL;
+                    }
+                }
+            }
+        }
+
+        public void Update(ContactInfoUpdateArgs args)
+        {
+            Entity entity = null;
+            if (EntitySearchDictionary.TryGetValue(args.ObjectID, out entity))
+            {
+                Person person = entity as Person;
+                if (person != null)
+                {
+                    lock (lockObject)
+                    {
+                        person.Phone = args.PhoneNumber;
+                        person.Email = args.EmailAddress;
+                    }
+                }
+            }
+        }
+
     }
 }

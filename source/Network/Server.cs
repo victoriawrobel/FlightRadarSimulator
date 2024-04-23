@@ -10,7 +10,6 @@ namespace OOD_24L_01180686.source.Network
     {
         private NetworkSourceSimulator.NetworkSourceSimulator server;
         private static Server serverInstance;
-
         private static object serverLock = new object();
         private string Filepath;
         private int MaxDelay = 0;
@@ -45,6 +44,7 @@ namespace OOD_24L_01180686.source.Network
             server = new NetworkSourceSimulator.NetworkSourceSimulator(Filepath, MinDelay, MaxDelay);
             server.OnNewDataReady += ServerOnNewDataReady;
             Task.Run(() => server.Run());
+            
         }
 
         public Task StopServer()

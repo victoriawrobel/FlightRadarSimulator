@@ -10,6 +10,7 @@ namespace OOD_24L_01180686.source.Network
         public static void CommandHandler(Server server)
         {
             server.StartServer();
+            
             NewsGenerator newsGenerator = new NewsGenerator(EntitySearch.GetReporters(), EntitySearch.GetReportables());
             while (true)
             {

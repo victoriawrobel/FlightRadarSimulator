@@ -10,12 +10,14 @@ namespace OOD_24L_01180686.source.Objects
         public ulong TargetID { get; protected set; }
         public string TakeOffTime { get; protected set; }
         public string LandingTime { get; protected set; }
-        public float Longitude { get; protected set; }
-        public float Latitude { get; protected set; }
-        public float AMSL { get; protected set; }
+        public float Longitude { get; set; }
+        public float Latitude { get; set; }
+        public float AMSL { get; set; }
         public ulong PlaneID { get; protected set; }
         public ulong[] CrewID { get; protected set; }
         public ulong[] LoadID { get; protected set; }
+
+        private DateTime LastUpdated;
 
         public Flight(ulong ID, ulong originID, ulong targetID, string takeOffTime, string landingTime, float longitude,
             float latitude, float aMSL, ulong planeID, ulong[] crewID, ulong[] loadID) : base(ID)
@@ -26,13 +28,16 @@ namespace OOD_24L_01180686.source.Objects
             this.LandingTime = landingTime;
             this.Longitude = longitude;
             this.Latitude = latitude;
-            AMSL = aMSL;
+            this.AMSL = aMSL;
             this.PlaneID = planeID;
             this.CrewID = crewID;
             this.LoadID = loadID;
+            LastUpdated = DateTime.Now;
+
+            InitialUpdate();
         }
 
-        public void UpdatePosition()
+        public void InitialUpdate()
         {
             if ((Airport)EntitySearch.GetObject(OriginID) != null &&
                 (Airport)EntitySearch.GetObject(TargetID) != null)
@@ -44,6 +49,42 @@ namespace OOD_24L_01180686.source.Objects
                     Longitude = origin.Longitude + (target.Longitude - origin.Longitude) * GetProgress();
                     Latitude = origin.Latitude + (target.Latitude - origin.Latitude) * GetProgress();
                     AMSL = origin.AMSL + (target.AMSL - origin.AMSL) * GetProgress();
+                }
+                else if (GetProgress() <= 0)
+                {
+                    Longitude = origin.Longitude;
+                    Latitude = origin.Latitude;
+                    AMSL = origin.AMSL;
+                }
+                else if (GetProgress() >= 1)
+                {
+                    Longitude = target.Longitude;
+                    Latitude = target.Latitude;
+                    AMSL = target.AMSL;
+                }
+            }
+            else
+            {
+                throw new KeyNotFoundException("Origin or target not found.");
+            }
+        }
+
+
+        public void UpdatePosition()
+        {
+            DateTime currentTime = DateTime.Now;
+            TimeSpan elapsedTime = currentTime - LastUpdated;
+            LastUpdated = currentTime;
+            if ((Airport)EntitySearch.GetObject(OriginID) != null &&
+                (Airport)EntitySearch.GetObject(TargetID) != null)
+            {
+                Airport origin = (Airport)EntitySearch.GetObject(OriginID);
+                Airport target = (Airport)EntitySearch.GetObject(TargetID);
+                if (GetProgress() < 1 && GetProgress() > 0)
+                {
+                    Longitude += (target.Longitude - Longitude) / GetProgress() * (float)elapsedTime.TotalHours;
+                    Latitude += (target.Latitude - Latitude) / GetProgress() * (float)elapsedTime.TotalHours;
+                    AMSL += (target.AMSL - AMSL) / GetProgress() * (float)elapsedTime.TotalHours;
                 }
                 else if (GetProgress() <= 0)
                 {
@@ -89,13 +130,11 @@ namespace OOD_24L_01180686.source.Objects
 
         public float GetRotation()
         {
-            if ((Airport)EntitySearch.GetObject(OriginID) != null &&
-                (Airport)EntitySearch.GetObject(TargetID) != null)
+            if ((Airport)EntitySearch.GetObject(TargetID) != null)
             {
-                Airport origin = (Airport)EntitySearch.GetObject(OriginID);
                 Airport target = (Airport)EntitySearch.GetObject(TargetID);
-                float x = target.Longitude - origin.Longitude;
-                float y = target.Latitude - origin.Latitude;
+                float x = target.Longitude - Longitude;
+                float y = target.Latitude - Latitude;
 
                 float rotation = (float)Math.Atan2(x, y);
                 return rotation;

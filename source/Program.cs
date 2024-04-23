@@ -23,6 +23,7 @@ namespace OOD_24L_01180686.source
             });
             thread.Start();
             var file = Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example1.ftr";
+            var file2 = Directory.GetCurrentDirectory() + "..\\..\\..\\..\\DataFiles\\example.ftre";
             IDataWrite dataWrite = new JSONWriter();
 
             EntitySearch.AddReporter(new Newspaper("Polytechnical Gazette"));
@@ -36,13 +37,16 @@ namespace OOD_24L_01180686.source
 
 
             Server.GetInstance(file);
+            UpdateServer.GetInstance(file2);
             FlightGUIDataClass flightGUIData = new FlightGUIDataClass();
             var flightGUIThread = new FlightGUIThread(flightGUIData);
             flightGUIThread.Start();
 
+            UpdateServer.GetInstance(file2).StartServer();
             CommandHandlerClass.CommandHandler(Server.GetInstance(file));
-            flightGUIThread.Stop();
 
+            flightGUIThread.Stop();
+            UpdateServer.GetInstance(file2).StopServer();
             thread.Interrupt();
             Console.WriteLine("Main thread exited.");
         }

@@ -1,5 +1,7 @@
 ﻿using OOD_24L_01180686.source.Objects;
 using FlightTrackerGUI;
+using NetworkSourceSimulator;
+using OOD_24L_01180686.source.Updates;
 
 namespace OOD_24L_01180686.source.Visualization
 {
@@ -13,17 +15,16 @@ namespace OOD_24L_01180686.source.Visualization
 
         public static void UpdateFlightsGUI()
         {
-            flightsData.Clear();
-            foreach (var obj in EntitySearch.GetFlights())
+            lock (EntitySearch.lockObject)
             {
-                if ((Flight)obj != null)
+                flightsData.Clear();
+                foreach (var flight in EntitySearch.GetFlights())
                 {
-                    Flight flight = (Flight)obj;
-                    flight.UpdatePosition();
-                    if (flight.GetProgress() < 1 && flight.GetProgress() > 0)
-                    {
-                        flightsData.Add(flight);
-                    }
+                        flight.UpdatePosition();
+                        if (flight.GetProgress() < 1 && flight.GetProgress() > 0)
+                        {
+                            flightsData.Add(flight);
+                        }
                 }
             }
         }
@@ -70,5 +71,6 @@ namespace OOD_24L_01180686.source.Visualization
                 return 0;
             }
         }
+
     }
 }
