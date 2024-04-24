@@ -103,10 +103,12 @@ namespace OOD_24L_01180686.source
 
         public void Update(IDUpdateArgs args)
         {
-            if (EntitySearchDictionary.ContainsKey(args.NewObjectID) || !EntitySearchDictionary.ContainsKey(args.ObjectID))
+            if (EntitySearchDictionary.ContainsKey(args.NewObjectID) ||
+                !EntitySearchDictionary.ContainsKey(args.ObjectID))
             {
                 return;
             }
+
             var obj = GetObject(args.ObjectID) as Entity;
             if (obj != null)
             {
@@ -154,6 +156,5 @@ namespace OOD_24L_01180686.source
                 }
             }
         }
-
     }
 }

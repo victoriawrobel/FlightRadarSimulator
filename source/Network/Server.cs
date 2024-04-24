@@ -44,7 +44,6 @@ namespace OOD_24L_01180686.source.Network
             server = new NetworkSourceSimulator.NetworkSourceSimulator(Filepath, MinDelay, MaxDelay);
             server.OnNewDataReady += ServerOnNewDataReady;
             Task.Run(() => server.Run());
-            
         }
 
         public Task StopServer()

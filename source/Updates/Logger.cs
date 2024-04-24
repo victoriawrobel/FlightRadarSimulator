@@ -1,6 +1,7 @@
 ﻿using NetworkSourceSimulator;
 using OOD_24L_01180686.source;
 using System.IO;
+using OOD_24L_01180686.source.Objects;
 
 namespace OOD_24L_01180686.source.Updates
 {
@@ -10,7 +11,8 @@ namespace OOD_24L_01180686.source.Updates
 
         public Logger()
         {
-            logFilePath = Directory.GetCurrentDirectory() +  $"..\\..\\..\\..\\DataFiles\\log_{DateTime.Now:yyyy-MM-dd}.txt";
+            logFilePath = Directory.GetCurrentDirectory() +
+                          $"..\\..\\..\\..\\DataFiles\\log_{DateTime.Now:yyyy-MM-dd}.txt";
         }
 
         public void Log(string message)
@@ -48,25 +50,42 @@ namespace OOD_24L_01180686.source.Updates
         {
             lock (EntitySearch.lockObject)
             {
-                if (EntitySearch.EntitySearchDictionary.ContainsKey(args.ObjectID))
+                if (EntitySearch.EntitySearchDictionary.TryGetValue(args.ObjectID, out var entity))
                 {
-                    Log($"Position Update - ObjectID: {args.ObjectID}, Longitude: {args.Longitude}, Latitude: {args.Latitude}, AMSL: {args.AMSL}. Success.");
+                    Flight flight = entity as Flight;
+                    if (flight != null)
+                    {
+                        Log(
+                            $"Position Update - ObjectID: {args.ObjectID}, Longitude: from {flight.Longitude} to {args.Longitude}, Latitude: from {flight.Latitude} to {args.Latitude}, AMSL: from {flight.AMSL} to {args.AMSL}. Success.");
+                    }
+                    else
+                    {
+                        Log($"Position Update - ObjectID: {args.ObjectID}. Object is not a Flight.");
+                    }
                 }
                 else
                 {
                     Log($"Position Update - ObjectID: {args.ObjectID}. Object not found.");
                 }
-            }   
+            }
         }
 
         public void Update(ContactInfoUpdateArgs args)
         {
             lock (EntitySearch.lockObject)
             {
-                if (EntitySearch.EntitySearchDictionary.ContainsKey(args.ObjectID))
+                if (EntitySearch.EntitySearchDictionary.TryGetValue(args.ObjectID, out var entity))
                 {
-                    Log(
-                        $"Contact Info Update - ObjectID: {args.ObjectID}, PhoneNumber: {args.PhoneNumber}, EmailAddress: {args.EmailAddress}. Success.");
+                    Person person = entity as Person;
+                    if (person != null)
+                    {
+                        Log(
+                            $"Contact Info Update - ObjectID: {args.ObjectID}, PhoneNumber: from {person.Phone} to {args.PhoneNumber}, EmailAddress: from {person.Email} to {args.EmailAddress}. Success.");
+                    }
+                    else
+                    {
+                        Log($"Contact Info Update - ObjectID: {args.ObjectID}. Object is not a person.");
+                    }
                 }
                 else
                 {

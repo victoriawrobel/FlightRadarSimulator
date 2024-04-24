@@ -86,12 +86,6 @@ namespace OOD_24L_01180686.source.Objects
                     Latitude += (target.Latitude - Latitude) / GetProgress() * (float)elapsedTime.TotalHours;
                     AMSL += (target.AMSL - AMSL) / GetProgress() * (float)elapsedTime.TotalHours;
                 }
-                else if (GetProgress() <= 0)
-                {
-                    Longitude = origin.Longitude;
-                    Latitude = origin.Latitude;
-                    AMSL = origin.AMSL;
-                }
                 else if (GetProgress() >= 1)
                 {
                     Longitude = target.Longitude;

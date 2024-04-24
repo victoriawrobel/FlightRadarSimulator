@@ -20,11 +20,13 @@ namespace OOD_24L_01180686.source.Visualization
                 flightsData.Clear();
                 foreach (var flight in EntitySearch.GetFlights())
                 {
-                        flight.UpdatePosition();
-                        if (flight.GetProgress() < 1 && flight.GetProgress() > 0)
-                        {
-                            flightsData.Add(flight);
-                        }
+                    flight.UpdatePosition();
+                    if (flight.GetProgress() < 1 &&
+                        flight.GetProgress() >=
+                        0) //GUI displaying flights that are in progress and which are yet to start
+                    {
+                        flightsData.Add(flight);
+                    }
                 }
             }
         }
@@ -71,6 +73,5 @@ namespace OOD_24L_01180686.source.Visualization
                 return 0;
             }
         }
-
     }
 }
