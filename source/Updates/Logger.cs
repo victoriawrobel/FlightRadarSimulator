@@ -13,6 +13,7 @@ namespace OOD_24L_01180686.source.Updates
         {
             logFilePath = Directory.GetCurrentDirectory() +
                           $"..\\..\\..\\..\\DataFiles\\log_{DateTime.Now:yyyy-MM-dd}.txt";
+            File.AppendAllText(logFilePath, "\n-- New log session created -- \n");
         }
 
         public void Log(string message)
