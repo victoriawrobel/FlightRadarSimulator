@@ -15,6 +15,10 @@ namespace OOD_24L_01180686.source.Objects
             this.FirstClassSize = firstClassSize;
             this.BusinessClassSize = businessClassSize;
             this.EconomyClassSize = economyClassSize;
+
+            FieldMap.Add("FirstClassSize", () => FirstClassSize);
+            FieldMap.Add("BusinessClassSize", () => BusinessClassSize);
+            FieldMap.Add("EconomyClassSize", () => EconomyClassSize);
         }
 
         public override string ToString()
@@ -26,6 +30,11 @@ namespace OOD_24L_01180686.source.Objects
         public string Accept(Reporter reporter)
         {
             return reporter.Visit(this);
+        }
+
+        public override string GetTypeCustom()
+        {
+            return "PassengerPlane";
         }
     }
 }

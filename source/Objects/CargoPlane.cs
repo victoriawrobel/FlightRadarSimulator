@@ -10,6 +10,8 @@ namespace OOD_24L_01180686.source.Objects
         public CargoPlane(ulong ID, string serialNr, string countryISO, string model, float maxLoad) : base(ID, serialNr, countryISO, model)
         {
             this.MaxLoad = maxLoad;
+
+            FieldMap.Add("MaxLoad", () => MaxLoad);
         }
 
         public override string ToString()
@@ -20,6 +22,11 @@ namespace OOD_24L_01180686.source.Objects
         public string Accept(Reporter reporter)
         {
             return reporter.Visit(this);
+        }
+
+        public override string GetTypeCustom()
+        {
+            return "CargoPlane";
         }
     }
 }

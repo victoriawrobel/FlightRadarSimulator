@@ -21,6 +21,13 @@ namespace OOD_24L_01180686.source.Objects
             this.Latitude = latitude;
             AMSL = aMSL;
             this.CountryISO = countryISO;
+
+            FieldMap.Add("Name", () => Name);
+            FieldMap.Add("Code", () => Code);
+            FieldMap.Add("Longitude", () => Longitude);
+            FieldMap.Add("Latitude", () => Latitude);
+            FieldMap.Add("AMSL", () => AMSL);
+            FieldMap.Add("CountryISO", () => CountryISO);
         }
 
         public override string ToString()
@@ -31,6 +38,11 @@ namespace OOD_24L_01180686.source.Objects
         public string Accept(Reporter reporter)
         {
             return reporter.Visit(this);
+        }
+
+        public string GetTypeCustom()
+        {
+            return "Airport";
         }
     }
 }

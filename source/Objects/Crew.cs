@@ -10,11 +10,19 @@ namespace OOD_24L_01180686.source.Objects
         {
             this.Practice = practice;
             this.Role = role;
+
+            FieldMap.Add("Practice", () => Practice);
+            FieldMap.Add("Role", () => Role);
         }
 
         public override string ToString()
         {
             return $"Crew: {ID} {Name} {Age} {Phone} {Email} {Practice} {Role}";
+        }
+
+        public override string GetTypeCustom()
+        {
+            return "Crew";
         }
     }
 }

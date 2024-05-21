@@ -23,7 +23,7 @@ namespace OOD_24L_01180686.source.Visualization
                     flight.UpdatePosition();
                     if (flight.GetProgress() < 1 &&
                         flight.GetProgress() >
-                        0) //GUI displaying flights that are in progress
+                        0)
                     {
                         flightsData.Add(flight);
                     }

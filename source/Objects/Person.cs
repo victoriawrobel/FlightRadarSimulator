@@ -14,11 +14,21 @@ namespace OOD_24L_01180686.source.Objects
             this.Age = age;
             this.Phone = phone;
             this.Email = email;
+
+            FieldMap.Add("Name", () => Name);
+            FieldMap.Add("Age", () => Age);
+            FieldMap.Add("Phone", () => Phone);
+            FieldMap.Add("Email", () => Email);
         }
 
         public override string ToString()
         {
             return $"Person: {ID} {Name} {Age} {Phone} {Email}";
+        }
+
+        public override string GetTypeCustom()
+        {
+            return "Person";
         }
     }
 }

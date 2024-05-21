@@ -1,9 +1,9 @@
 ﻿using OOD_24L_01180686.source.Writers;
 using OOD_24L_01180686.source.Objects;
 using OOD_24L_01180686.source.Reports;
+using OOD_24L_01180686.source.Network;
 
-
-namespace OOD_24L_01180686.source.Network
+namespace OOD_24L_01180686.source.Commands
 {
     public class CommandHandlerClass
     {
@@ -21,9 +21,9 @@ namespace OOD_24L_01180686.source.Network
                     Console.WriteLine("Creating a snapshot...");
                     foreach (var obj in EntitySearch.GetFlights())
                     {
-                        if ((Flight)obj != null)
+                        if (obj != null)
                         {
-                            ((Flight)obj).UpdatePosition();
+                            obj.UpdatePosition();
                         }
                     }
 
@@ -48,7 +48,14 @@ namespace OOD_24L_01180686.source.Network
                 }
                 else
                 {
-                    Console.WriteLine("Invalid command. Available commands: start, print, exit");
+                    Command command;
+                    try { 
+                        command = CommandParser.Parse(input);
+                        command.Execute();
+                    } catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
             }
         }

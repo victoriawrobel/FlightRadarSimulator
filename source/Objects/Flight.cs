@@ -34,6 +34,17 @@ namespace OOD_24L_01180686.source.Objects
             this.LoadID = loadID;
             LastUpdated = DateTime.Now;
 
+            FieldMap.Add("OriginID", () => OriginID);
+            FieldMap.Add("TargetID", () => TargetID);
+            FieldMap.Add("TakeOffTime", () => TakeOffTime);
+            FieldMap.Add("LandingTime", () => LandingTime);
+            FieldMap.Add("Longitude", () => Longitude);
+            FieldMap.Add("Latitude", () => Latitude);
+            FieldMap.Add("AMSL", () => AMSL);
+            FieldMap.Add("PlaneID", () => PlaneID);
+            FieldMap.Add("CrewID", () => CrewID);
+            FieldMap.Add("LoadID", () => LoadID);
+
             InitialUpdate();
         }
 
@@ -141,6 +152,11 @@ namespace OOD_24L_01180686.source.Objects
         {
             return
                 $"Flight: {ID} {OriginID} {TargetID} {TakeOffTime} {LandingTime} {Longitude} {Latitude} {AMSL} {PlaneID} {CrewID} {LoadID}";
+        }
+
+        public override string GetTypeCustom()
+        {
+            return "Flight";
         }
     }
 }

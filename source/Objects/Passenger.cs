@@ -10,11 +10,19 @@ namespace OOD_24L_01180686.source.Objects
         {
             this.CabinClass = cabinClass;
             this.Miles = miles;
+
+            FieldMap.Add("CabinClass", () => CabinClass);
+            FieldMap.Add("Miles", () => Miles);
         }
 
         public override string ToString()
         {
             return $"Passenger: {ID} {Name} {Age} {Phone} {Email} {CabinClass} {Miles}";
+        }
+
+        public override string GetTypeCustom()
+        {
+            return "Passenger";
         }
     }
 }

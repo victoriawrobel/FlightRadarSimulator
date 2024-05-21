@@ -12,11 +12,20 @@ namespace OOD_24L_01180686.source.Objects
             this.SerialNr = serialNr;
             this.CountryISO = countryISO;
             this.Model = model;
+
+            FieldMap.Add("SerialNr", () => SerialNr);
+            FieldMap.Add("CountryISO", () => CountryISO);
+            FieldMap.Add("Model", () => Model);
         }
 
         public override string ToString()
         {
             return $"Plane: {ID} {SerialNr} {CountryISO} {Model}";
+        }
+
+        public override string GetTypeCustom()
+        {
+            return "Person";
         }
     }
 }

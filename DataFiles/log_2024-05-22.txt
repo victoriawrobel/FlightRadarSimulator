@@ -1,0 +1,46 @@
+
+-- New log session created -- 
+00:01:01 - ID Update - ObjectID: 10. New ID already in use.
+00:01:02 - ID Update - ObjectID: 55, NewObjectID: 1631. Success.
+00:01:02 - ID Update - ObjectID: 340, NewObjectID: 2209. Success.
+00:01:02 - ID Update - ObjectID: 457, NewObjectID: 1236. Success.
+00:01:03 - ID Update - ObjectID: 506, NewObjectID: 2033. Success.
+00:01:03 - ID Update - ObjectID: 147, NewObjectID: 2401. Success.
+00:01:04 - ID Update - ObjectID: 574, NewObjectID: 1962. Success.
+00:01:04 - ID Update - ObjectID: 1070, NewObjectID: 1579. Success.
+00:01:05 - ID Update - ObjectID: 618. New ID already in use.
+00:01:05 - ID Update - ObjectID: 1326. Original ID not found.
+00:01:05 - ID Update - ObjectID: 104, NewObjectID: 1315. Success.
+00:01:06 - ID Update - ObjectID: 1472. Original ID not found.
+00:01:06 - ID Update - ObjectID: 1392. Original ID not found.
+00:01:07 - ID Update - ObjectID: 1481. Original ID not found.
+00:01:07 - ID Update - ObjectID: 182. New ID already in use.
+00:01:07 - ID Update - ObjectID: 29, NewObjectID: 2089. Success.
+00:01:08 - ID Update - ObjectID: 1485. Original ID not found.
+00:01:08 - ID Update - ObjectID: 499, NewObjectID: 1329. Success.
+00:01:09 - ID Update - ObjectID: 1475. Original ID not found.
+00:01:09 - ID Update - ObjectID: 171, NewObjectID: 2098. Success.
+00:01:09 - ID Update - ObjectID: 357, NewObjectID: 2203. Success.
+00:01:10 - ID Update - ObjectID: 358. New ID already in use.
+00:01:10 - ID Update - ObjectID: 1347. Original ID not found.
+00:01:11 - ID Update - ObjectID: 962, NewObjectID: 1527. Success.
+00:01:11 - ID Update - ObjectID: 627, NewObjectID: 1561. Success.
+00:01:12 - ID Update - ObjectID: 792, NewObjectID: 1234. Success.
+00:01:12 - ID Update - ObjectID: 650, NewObjectID: 2321. Success.
+00:01:12 - ID Update - ObjectID: 1431. Original ID not found.
+00:01:13 - ID Update - ObjectID: 740, NewObjectID: 2215. Success.
+00:01:13 - ID Update - ObjectID: 475, NewObjectID: 1630. Success.
+00:01:14 - Position Update - ObjectID: 1073, Longitude: from 123.46 to -145.21829, Latitude: from 1.06 to -87.924355, AMSL: from 1672.15 to 292.1136. Success.
+00:01:14 - Position Update - ObjectID: 1036, Longitude: from 41.5 to -115.52941, Latitude: from 52.68 to -65.998566, AMSL: from 3676.04 to 7409.812. Success.
+00:01:14 - Position Update - ObjectID: 1103, Longitude: from -118.53 to -67.17546, Latitude: from 66.04 to -59.330032, AMSL: from 3224.97 to 3202.3145. Success.
+00:01:15 - Position Update - ObjectID: 1088, Longitude: from 41.5 to 48.47077, Latitude: from 52.68 to 27.736376, AMSL: from 3676.04 to 9320.949. Success.
+00:01:15 - Position Update - ObjectID: 1000, Longitude: from 123.46 to 15.235422, Latitude: from 1.06 to 53.14479, AMSL: from 1672.15 to 9944.197. Success.
+00:01:16 - Position Update - ObjectID: 1175, Longitude: from 74.77 to -55.384537, Latitude: from 35.27 to 87.035736, AMSL: from 2570.73 to 2779.9148. Success.
+00:01:16 - Position Update - ObjectID: 1008, Longitude: from 175.55 to 96.664536, Latitude: from 15.54 to 56.606426, AMSL: from 473.4 to 457.798. Success.
+00:01:16 - Position Update - ObjectID: 1013, Longitude: from 112.05 to -146.93097, Latitude: from -16.09 to 54.21434, AMSL: from 1487.52 to 7967.9062. Success.
+00:01:17 - Position Update - ObjectID: 984, Longitude: from 88.78 to -171.53268, Latitude: from 10.66 to -73.83688, AMSL: from 273.45 to 4522.8696. Success.
+00:01:17 - Position Update - ObjectID: 1143, Longitude: from -118.53 to -5.95481, Latitude: from 66.04 to -6.869265, AMSL: from 3224.97 to 9238.392. Success.
+00:01:18 - Position Update - ObjectID: 980, Longitude: from 112.05 to -82.12707, Latitude: from -16.09 to 1.479755, AMSL: from 1487.52 to 444.67447. Success.
+00:01:18 - Position Update - ObjectID: 1019, Longitude: from 158.21 to -18.238646, Latitude: from -40.94 to 63.14051, AMSL: from 764.46 to 5672.0625. Success.
+00:01:18 - Position Update - ObjectID: 321. Object is not a Flight.
+00:01:19 - Position Update - ObjectID: 1073, Longitude: from -145.21829 to -108.147354, Latitude: from -87.924355 to 27.09598, AMSL: from 292.1136 to 3119.7957. Success.
