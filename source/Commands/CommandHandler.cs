@@ -52,6 +52,8 @@ namespace OOD_24L_01180686.source.Commands
                     try { 
                         command = CommandParser.Parse(input);
                         command.Execute();
+                        EntitySearch entitySearch = new EntitySearch();
+                        Console.WriteLine("Command executed successfully.");
                     } catch (Exception ex)
                     {
                         Console.WriteLine(ex.Message);

@@ -50,7 +50,7 @@ namespace OOD_24L_01180686.source.Objects
             return reporter.Visit(this);
         }
 
-        public string GetTypeCustom()
+        public override string GetTypeCustom()
         {
             return "Airport";
         }
