@@ -3,8 +3,14 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class Passenger : Person
     {
-        public string CabinClass { get; protected set; }
-        public ulong Miles { get; protected set; }
+        public string CabinClass { get; set; }
+        public ulong Miles { get; set; }
+
+        public Passenger() : base()
+        {
+            CabinClass = "Economy";
+            Miles = 0;
+        }
 
         public Passenger(ulong ID, string name, ulong age, string phone, string email, string cabinClass, ulong miles) : base(ID, name, age, phone, email)
         {

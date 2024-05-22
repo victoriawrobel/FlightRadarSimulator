@@ -3,10 +3,18 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class Person : Entity
     {
-        public string Name { get; protected set; }
-        public ulong Age { get; protected set; }
+        public string Name { get; set; }
+        public ulong Age { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
+
+        public Person() : base()
+        {
+            Name = "Unknown";
+            Age = 0;
+            Phone = "N/A";
+            Email = "N/A";
+        }
 
         public Person(ulong ID, string name, ulong age, string phone, string email) : base(ID)
         {

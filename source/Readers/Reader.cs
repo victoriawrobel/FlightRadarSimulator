@@ -174,5 +174,17 @@ namespace OOD_24L_01180686.source.Readers
                     }
                 },
             };
+
+        public static readonly Dictionary<string, Func<Entity>> objectCreatorsAdd =
+            new Dictionary<string, Func<Entity>>()
+            {
+                { "Airport", () => new Airport() },
+                { "Cargo", () => new Cargo() },
+                { "CargoPlane", () => new CargoPlane() },
+                { "Crew", () => new Crew() },
+                { "Flight", () => new Flight() },
+                { "Passenger", () => new Passenger() },
+                { "PassengerPlane", () => new PassengerPlane() }
+            };
     }
 }

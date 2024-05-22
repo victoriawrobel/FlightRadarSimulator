@@ -3,9 +3,16 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class Cargo : Entity
     {
-        public float Weight { get; protected set; }
-        public string Code { get; protected set; }
-        public string Description { get; protected set; }
+        public float Weight { get; set; }
+        public string Code { get; set; }
+        public string Description { get; set; }
+
+        public Cargo() : base()
+        {
+            Weight = 0.0f;
+            Code = "N/A";
+            Description = "No description available";
+        }
 
         public Cargo(ulong ID, float weight, string code, string description) : base(ID)
         {

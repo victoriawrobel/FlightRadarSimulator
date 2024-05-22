@@ -53,6 +53,9 @@ namespace OOD_24L_01180686.source
             lock (lockObject)
             {
                 EntitySearchDictionary.Add(e.ID, e);
+                Objects.Add(e);
+                if(e as Flight != null)
+                    AddFlight((Flight)e);
             }
         }
 
@@ -128,6 +131,27 @@ namespace OOD_24L_01180686.source
                     EntitySearchDictionary.Remove(args.ObjectID);
                     newObj.ID = args.NewObjectID;
                     EntitySearchDictionary.Add(args.NewObjectID, newObj);
+                }
+            }
+        }
+
+        public static void Update(ulong oldID, ulong newID)
+        {
+            if (EntitySearchDictionary.ContainsKey(newID) ||
+                !EntitySearchDictionary.ContainsKey(oldID))
+            {
+                return;
+            }
+
+            var obj = GetObject(oldID) as Entity;
+            if (obj != null)
+            {
+                lock (lockObject)
+                {
+                    var newObj = EntitySearchDictionary[oldID];
+                    EntitySearchDictionary.Remove(oldID);
+                    newObj.ID = newID;
+                    EntitySearchDictionary.Add(newID, newObj);
                 }
             }
         }

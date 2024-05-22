@@ -5,7 +5,12 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class CargoPlane : Plane, IReportable
     {
-        public float MaxLoad { get; protected set; }
+        public float MaxLoad { get; set; }
+
+        public CargoPlane() : base()
+        {
+            MaxLoad = 0.0f;
+        }
 
         public CargoPlane(ulong ID, string serialNr, string countryISO, string model, float maxLoad) : base(ID, serialNr, countryISO, model)
         {

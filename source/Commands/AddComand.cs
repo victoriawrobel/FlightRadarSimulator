@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOD_24L_01180686.source.Readers;
 
 namespace OOD_24L_01180686.source.Commands
 {
@@ -17,7 +18,23 @@ namespace OOD_24L_01180686.source.Commands
 
         public override void Execute()
         {
-            throw new NotImplementedException();
+            if (Reader.objectCreatorsAdd.TryGetValue(ObjectClass, out var fun))
+            {
+                var ent = fun.Invoke();
+                EntitySearch.AddObject(ent);
+                foreach (var kvp in KeyValuePairs)
+                {
+                    var fieldName = kvp.Key;
+                    var newValue = ParseValue(kvp.Value);
+
+                    if (fieldName.Equals("ID", StringComparison.OrdinalIgnoreCase))
+                    {
+                        EntitySearch.Update(ent.ID, (ulong)newValue);
+                    }
+
+                    ent.FieldMap[fieldName] = () => newValue;
+                }
+            }
         }
     }
 }

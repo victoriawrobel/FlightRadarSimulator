@@ -19,6 +19,21 @@ namespace OOD_24L_01180686.source.Objects
 
         private DateTime LastUpdated;
 
+        public Flight() : base()
+        {
+            OriginID = 0;
+            TargetID = 0;
+            TakeOffTime = "N/A";
+            LandingTime = "N/A";
+            Longitude = 0.0f;
+            Latitude = 0.0f;
+            AMSL = 0.0f;
+            PlaneID = 0;
+            CrewID = Array.Empty<ulong>();
+            LoadID = Array.Empty<ulong>();
+            LastUpdated = DateTime.Now;
+        }
+
         public Flight(ulong ID, ulong originID, ulong targetID, string takeOffTime, string landingTime, float longitude,
             float latitude, float aMSL, ulong planeID, ulong[] crewID, ulong[] loadID) : base(ID)
         {

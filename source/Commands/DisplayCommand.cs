@@ -60,7 +60,7 @@ namespace OOD_24L_01180686.source.Commands
             {
                 for (int i = 0; i < row.Length; i++)
                 {
-                    Console.Write("| " + row[i].PadRight(columnWidths[i]) + " ");
+                    Console.Write("| " + row[i].PadLeft(columnWidths[i]) + " ");
                 }
                 Console.WriteLine("|");
             }
@@ -89,7 +89,25 @@ namespace OOD_24L_01180686.source.Commands
             return value.ToString();
         }
 
+        private IEnumerable<Dictionary<string, object>> SelectFields(IEnumerable<object> objects, string[] fields)
+        {
+            var fieldData = new List<Dictionary<string, object>>();
+            bool all = fields.Length == 1 && fields[0] == "*";
+            foreach (var obj in objects)
+            {
+                var entity = obj as Entity;
+                if (all) fields = entity.FieldMap.Keys.ToArray();
+                var fieldDict = new Dictionary<string, object>();
+                foreach (var field in fields)
+                {
+                    var propertyValue = entity.GetFieldValue(field);
+                    fieldDict[field] = propertyValue;
+                }
+                fieldData.Add(fieldDict);
+            }
 
+            return fieldData;
+        }
 
 
     }

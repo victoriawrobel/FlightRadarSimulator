@@ -3,8 +3,14 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class Crew : Person
     {
-        public ushort Practice { get; protected set; }
-        public string Role { get; protected set; }
+        public ushort Practice { get; set; }
+        public string Role { get; set; }
+
+        public Crew() : base()
+        {
+            Practice = 0;
+            Role = "Unknown";
+        }
 
         public Crew(ulong ID, string name, ulong age, string phone, string email, ushort practice, string role) : base(ID, name, age, phone, email)
         {

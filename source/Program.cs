@@ -11,6 +11,7 @@ namespace OOD_24L_01180686.source
     {
         public static void Main(string[] args)
         {
+            Console.Clear();
             Thread thread = new Thread(() =>
             {
                 try

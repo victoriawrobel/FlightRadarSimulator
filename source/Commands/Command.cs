@@ -42,6 +42,16 @@ namespace OOD_24L_01180686.source.Commands
             return value;
         }
 
+        protected IEnumerable<object> FetchObjects(string objectClass)
+        {
+            lock (EntitySearch.lockObject)
+            {
+                return EntitySearch.EntitySearchDictionary.Values
+                    .Where(entity => entity.GetTypeCustom().Equals(objectClass, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+            }
+        }
+
         protected IEnumerable<object> FilterObjects(IEnumerable<object> objects, string conditions)
         {
             if (string.IsNullOrWhiteSpace(conditions)) return objects;
@@ -134,33 +144,5 @@ namespace OOD_24L_01180686.source.Commands
             return filteredObjects;
         }
 
-        protected IEnumerable<object> FetchObjects(string objectClass)
-        {
-            lock (EntitySearch.lockObject)
-            {
-                return EntitySearch.EntitySearchDictionary.Values
-                    .Where(entity => entity.GetTypeCustom().Equals(objectClass, StringComparison.OrdinalIgnoreCase))
-                    .ToList();
-            }
-        }
-
-        protected IEnumerable<Dictionary<string, object>> SelectFields(IEnumerable<object> objects, string[] fields)
-        {
-            var fieldData = new List<Dictionary<string, object>>();
-
-            foreach (var obj in objects)
-            {
-                var entity = obj as Entity;
-                var fieldDict = new Dictionary<string, object>();
-                foreach (var field in fields)
-                {
-                    var propertyValue = entity.GetFieldValue(field);
-                    fieldDict[field] = propertyValue;
-                }
-                fieldData.Add(fieldDict);
-            }
-
-            return fieldData;
-        }
     }
 }

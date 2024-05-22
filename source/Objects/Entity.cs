@@ -7,6 +7,11 @@ namespace OOD_24L_01180686.source.Objects
 
         public Dictionary<string, Func<object>> FieldMap = new Dictionary<string, Func<object>>();
 
+        public Entity()
+        {
+            this.ID = EntitySearch.EntitySearchDictionary.Keys.Max() + 1;
+        }
+
         public Entity(ulong ID)
         {
             this.ID = ID;
