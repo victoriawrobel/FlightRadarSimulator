@@ -19,7 +19,20 @@ namespace OOD_24L_01180686.source.Commands
 
         public override void Execute()
         {
-            throw new NotImplementedException();
+            var objects = FetchObjects(ObjectClass);
+
+            var filteredObjects = FilterObjects(objects, Conditions);
+
+            foreach (var obj in filteredObjects)
+            {
+                EntitySearch.deleteObject(obj);
+            }
+
+            foreach (var flight in EntitySearch.GetFlights())
+            {
+                flight.CrewID = flight.CrewID.Where(id => !filteredObjects.Contains(id)).ToArray();
+                flight.LoadID = flight.LoadID.Where(id => !filteredObjects.Contains(id)).ToArray();
+            }
         }
     }
 }

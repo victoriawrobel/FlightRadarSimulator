@@ -101,6 +101,16 @@ namespace OOD_24L_01180686.source
             }
         }
 
+        public static void deleteObject(object obj)
+        {
+            lock (lockObject)
+            {
+                Objects.Remove(obj);
+                if(obj as Entity != null)
+                    EntitySearchDictionary.Remove(((Entity)obj).ID);
+            }
+        }
+
         public void Update(IDUpdateArgs args)
         {
             if (EntitySearchDictionary.ContainsKey(args.NewObjectID) ||

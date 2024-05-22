@@ -6,16 +6,16 @@ namespace OOD_24L_01180686.source.Objects
 {
     public class Flight : Entity
     {
-        public ulong OriginID { get; protected set; }
-        public ulong TargetID { get; protected set; }
-        public string TakeOffTime { get; protected set; }
-        public string LandingTime { get; protected set; }
+        public ulong OriginID { get; set; }
+        public ulong TargetID { get; set; }
+        public string TakeOffTime { get; set; }
+        public string LandingTime { get; set; }
         public float Longitude { get; set; }
         public float Latitude { get; set; }
         public float AMSL { get; set; }
-        public ulong PlaneID { get; protected set; }
-        public ulong[] CrewID { get; protected set; }
-        public ulong[] LoadID { get; protected set; }
+        public ulong PlaneID { get; set; }
+        public ulong[] CrewID { get; set; }
+        public ulong[] LoadID { get; set; }
 
         private DateTime LastUpdated;
 
