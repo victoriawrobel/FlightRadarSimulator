@@ -12,6 +12,8 @@ namespace OOD_24L_01180686.source.Objects
             Weight = 0.0f;
             Code = "N/A";
             Description = "No description available";
+
+            IntitializeFieldMap();
         }
 
         public Cargo(ulong ID, float weight, string code, string description) : base(ID)
@@ -20,6 +22,11 @@ namespace OOD_24L_01180686.source.Objects
             this.Code = code;
             this.Description = description;
 
+            IntitializeFieldMap();
+        }
+
+        private void IntitializeFieldMap()
+        {
             FieldMap.Add("Weight", () => Weight);
             FieldMap.Add("Code", () => Code);
             FieldMap.Add("Description", () => Description);

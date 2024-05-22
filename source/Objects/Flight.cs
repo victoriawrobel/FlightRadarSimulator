@@ -32,6 +32,8 @@ namespace OOD_24L_01180686.source.Objects
             CrewID = Array.Empty<ulong>();
             LoadID = Array.Empty<ulong>();
             LastUpdated = DateTime.Now;
+
+            IntitializeFieldMap();
         }
 
         public Flight(ulong ID, ulong originID, ulong targetID, string takeOffTime, string landingTime, float longitude,
@@ -49,6 +51,12 @@ namespace OOD_24L_01180686.source.Objects
             this.LoadID = loadID;
             LastUpdated = DateTime.Now;
 
+            IntitializeFieldMap();
+            InitialUpdate();
+        }
+
+        private void IntitializeFieldMap()
+        {
             FieldMap.Add("OriginID", () => OriginID);
             FieldMap.Add("TargetID", () => TargetID);
             FieldMap.Add("TakeOffTime", () => TakeOffTime);
@@ -59,8 +67,6 @@ namespace OOD_24L_01180686.source.Objects
             FieldMap.Add("PlaneID", () => PlaneID);
             FieldMap.Add("CrewID", () => CrewID);
             FieldMap.Add("LoadID", () => LoadID);
-
-            InitialUpdate();
         }
 
         public void InitialUpdate()

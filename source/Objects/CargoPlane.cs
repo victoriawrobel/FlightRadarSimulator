@@ -10,6 +10,8 @@ namespace OOD_24L_01180686.source.Objects
         public CargoPlane() : base()
         {
             MaxLoad = 0.0f;
+
+            FieldMap.Add("MaxLoad", () => MaxLoad);
         }
 
         public CargoPlane(ulong ID, string serialNr, string countryISO, string model, float maxLoad) : base(ID, serialNr, countryISO, model)

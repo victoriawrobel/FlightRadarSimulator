@@ -12,6 +12,8 @@ namespace OOD_24L_01180686.source.Objects
             SerialNr = "N/A";
             CountryISO = "UNK";
             Model = "Unknown";
+
+            InitializeFieldMap();
         }
 
         public Plane(ulong ID, string serialNr, string countryISO, string model) : base(ID)
@@ -20,6 +22,11 @@ namespace OOD_24L_01180686.source.Objects
             this.CountryISO = countryISO;
             this.Model = model;
 
+            InitializeFieldMap();
+        }
+
+        public void InitializeFieldMap()
+        {
             FieldMap.Add("SerialNr", () => SerialNr);
             FieldMap.Add("CountryISO", () => CountryISO);
             FieldMap.Add("Model", () => Model);

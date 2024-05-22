@@ -14,6 +14,8 @@ namespace OOD_24L_01180686.source.Objects
             FirstClassSize = 0;
             BusinessClassSize = 0;
             EconomyClassSize = 0;
+
+            InitializeFieldMap();
         }
 
         public PassengerPlane(ulong ID, string serialNr, string countryISO, string model, ushort firstClassSize, ushort businessClassSize, ushort economyClassSize) : 
@@ -23,6 +25,11 @@ namespace OOD_24L_01180686.source.Objects
             this.BusinessClassSize = businessClassSize;
             this.EconomyClassSize = economyClassSize;
 
+            InitializeFieldMap();
+        }
+
+        public void InitializeFieldMap()
+        {
             FieldMap.Add("FirstClassSize", () => FirstClassSize);
             FieldMap.Add("BusinessClassSize", () => BusinessClassSize);
             FieldMap.Add("EconomyClassSize", () => EconomyClassSize);
