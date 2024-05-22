@@ -14,6 +14,8 @@ namespace OOD_24L_01180686.source.Objects
             Age = 0;
             Phone = "N/A";
             Email = "N/A";
+
+            IntiializeFieldMap();
         }
 
         public Person(ulong ID, string name, ulong age, string phone, string email) : base(ID)
@@ -23,6 +25,11 @@ namespace OOD_24L_01180686.source.Objects
             this.Phone = phone;
             this.Email = email;
 
+            IntiializeFieldMap();
+        }
+
+        private void IntiializeFieldMap()
+        {
             FieldMap.Add("Name", () => Name);
             FieldMap.Add("Age", () => Age);
             FieldMap.Add("Phone", () => Phone);

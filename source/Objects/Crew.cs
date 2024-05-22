@@ -10,6 +10,8 @@ namespace OOD_24L_01180686.source.Objects
         {
             Practice = 0;
             Role = "Unknown";
+
+            IntitializeFieldMap();
         }
 
         public Crew(ulong ID, string name, ulong age, string phone, string email, ushort practice, string role) : base(ID, name, age, phone, email)
@@ -17,6 +19,11 @@ namespace OOD_24L_01180686.source.Objects
             this.Practice = practice;
             this.Role = role;
 
+            IntitializeFieldMap();
+        }
+
+        private void IntitializeFieldMap()
+        {
             FieldMap.Add("Practice", () => Practice);
             FieldMap.Add("Role", () => Role);
         }

@@ -20,6 +20,8 @@ namespace OOD_24L_01180686.source.Objects
             Latitude = 0.0f;
             AMSL = 0.0f;
             CountryISO = "UNK";
+
+            IntitializeFieldMap();
         }
 
         public Airport(ulong ID, string name, string code, float longitude, float latitude, float aMSL,
@@ -32,6 +34,11 @@ namespace OOD_24L_01180686.source.Objects
             AMSL = aMSL;
             this.CountryISO = countryISO;
 
+            IntitializeFieldMap();
+        }
+
+        private void IntitializeFieldMap()
+        {
             FieldMap.Add("Name", () => Name);
             FieldMap.Add("Code", () => Code);
             FieldMap.Add("Longitude", () => Longitude);

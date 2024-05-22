@@ -10,6 +10,8 @@ namespace OOD_24L_01180686.source.Objects
         public Entity()
         {
             this.ID = EntitySearch.EntitySearchDictionary.Keys.Max() + 1;
+
+            FieldMap.Add("ID", () => ID);
         }
 
         public Entity(ulong ID)
