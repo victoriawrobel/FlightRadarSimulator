@@ -1,5 +1,4 @@
-﻿
-namespace OOD_24L_01180686.source.Objects
+﻿namespace OOD_24L_01180686.source.Objects
 {
     public class Crew : Person
     {
@@ -14,7 +13,8 @@ namespace OOD_24L_01180686.source.Objects
             IntitializeFieldMap();
         }
 
-        public Crew(ulong ID, string name, ulong age, string phone, string email, ushort practice, string role) : base(ID, name, age, phone, email)
+        public Crew(ulong ID, string name, ulong age, string phone, string email, ushort practice, string role) : base(
+            ID, name, age, phone, email)
         {
             this.Practice = practice;
             this.Role = role;

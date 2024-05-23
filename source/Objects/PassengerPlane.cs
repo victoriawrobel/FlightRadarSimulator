@@ -1,5 +1,4 @@
-﻿
-using OOD_24L_01180686.source.Reports;
+﻿using OOD_24L_01180686.source.Reports;
 
 namespace OOD_24L_01180686.source.Objects
 {
@@ -18,7 +17,8 @@ namespace OOD_24L_01180686.source.Objects
             InitializeFieldMap();
         }
 
-        public PassengerPlane(ulong ID, string serialNr, string countryISO, string model, ushort firstClassSize, ushort businessClassSize, ushort economyClassSize) : 
+        public PassengerPlane(ulong ID, string serialNr, string countryISO, string model, ushort firstClassSize,
+            ushort businessClassSize, ushort economyClassSize) :
             base(ID, serialNr, countryISO, model)
         {
             this.FirstClassSize = firstClassSize;

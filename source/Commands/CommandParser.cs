@@ -8,13 +8,15 @@ namespace OOD_24L_01180686.source.Commands
 {
     internal class CommandParser
     {
-        private static readonly Dictionary<string, Func<string, Command>> commandParsers = new Dictionary<string, Func<string, Command>>
-        {
-            { "display", ParseDisplayCommand },
-            { "add", ParseAddCommand },
-            { "delete", ParseDeleteCommand },
-            { "update", ParseUpdateCommand }
-        };
+        private static readonly Dictionary<string, Func<string, Command>> commandParsers =
+            new Dictionary<string, Func<string, Command>>
+            {
+                { "display", ParseDisplayCommand },
+                { "add", ParseAddCommand },
+                { "delete", ParseDeleteCommand },
+                { "update", ParseUpdateCommand }
+            };
+
         public static Command Parse(string input)
         {
             var parts = input.Split(new char[] { ' ' }, 2, StringSplitOptions.RemoveEmptyEntries);
@@ -73,7 +75,8 @@ namespace OOD_24L_01180686.source.Commands
         {
             var parts = input.Split(new string[] { " set (" }, StringSplitOptions.RemoveEmptyEntries);
             var objectClass = parts[0];
-            var keyValueAndConditions = parts[1].Split(new string[] { ") where " }, StringSplitOptions.RemoveEmptyEntries);
+            var keyValueAndConditions =
+                parts[1].Split(new string[] { ") where " }, StringSplitOptions.RemoveEmptyEntries);
 
             var keyValueList = keyValueAndConditions[0];
             var conditions = keyValueAndConditions.Length > 1 ? keyValueAndConditions[1] : null;

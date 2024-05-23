@@ -10,16 +10,21 @@ namespace OOD_24L_01180686.source.Commands
 {
     internal abstract class Command
     {
-        public static readonly Dictionary<string, Func<IComparable, IComparable, bool>> Operators = new Dictionary<string, Func<IComparable, IComparable, bool>>
+        public static readonly Dictionary<string, Func<IComparable, IComparable, bool>> Operators =
+            new Dictionary<string, Func<IComparable, IComparable, bool>>
+            {
+                { "==", (a, b) => a.Equals(b) },
+                { "!=", (a, b) => !a.Equals(b) },
+                { ">", (a, b) => a.CompareTo(b) > 0 },
+                { "<", (a, b) => a.CompareTo(b) < 0 },
+                { ">=", (a, b) => a.CompareTo(b) >= 0 },
+                { "<=", (a, b) => a.CompareTo(b) <= 0 }
+            };
+
+        public Command()
         {
-            { "==", (a, b) => a.Equals(b) },
-            { "!=", (a, b) => !a.Equals(b) },
-            { ">", (a, b) => a.CompareTo(b) > 0 },
-            { "<", (a, b) =>a.CompareTo(b) < 0 },
-            { ">=", (a, b) => a.CompareTo(b) >= 0 },
-            { "<=", (a, b) => a.CompareTo(b) <= 0 }
-        };
-        public Command() { }
+        }
+
         public Command(string objectClass)
         {
             ObjectClass = objectClass;
@@ -39,6 +44,7 @@ namespace OOD_24L_01180686.source.Commands
             {
                 return doubleValue;
             }
+
             return value;
         }
 
@@ -60,8 +66,8 @@ namespace OOD_24L_01180686.source.Commands
             var operators = new[] { ">=", "<=", "==", "!=", "=", ">", "<" };
 
             var conditionParts = Regex.Split(conditions, @"\s*(and|or)\s*")
-                                       .Where(part => !string.IsNullOrWhiteSpace(part))
-                                       .ToList();
+                .Where(part => !string.IsNullOrWhiteSpace(part))
+                .ToList();
 
             foreach (var obj in objects)
             {
@@ -75,7 +81,8 @@ namespace OOD_24L_01180686.source.Commands
                 {
                     var part = conditionParts[i].Trim();
 
-                    if (part.Equals("and", StringComparison.OrdinalIgnoreCase) || part.Equals("or", StringComparison.OrdinalIgnoreCase))
+                    if (part.Equals("and", StringComparison.OrdinalIgnoreCase) ||
+                        part.Equals("or", StringComparison.OrdinalIgnoreCase))
                     {
                         logicStack.Push(part.ToLower());
                     }
@@ -143,6 +150,5 @@ namespace OOD_24L_01180686.source.Commands
 
             return filteredObjects;
         }
-
     }
 }

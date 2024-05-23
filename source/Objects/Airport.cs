@@ -1,5 +1,4 @@
-﻿
-using OOD_24L_01180686.source.Reports;
+﻿using OOD_24L_01180686.source.Reports;
 
 namespace OOD_24L_01180686.source.Objects
 {

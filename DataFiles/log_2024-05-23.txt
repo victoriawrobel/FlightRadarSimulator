@@ -143,3 +143,385 @@
 00:03:48 - Contact Info Update - ObjectID: 234, PhoneNumber: from 366-468-9423 to 382-227-2487, EmailAddress: from jasoncook3575@gmail.com to hjghjchbxjgb@abilitys.site. Success.
 00:03:48 - Contact Info Update - ObjectID: 102, PhoneNumber: from 615-473-6079 to 383-287-1506, EmailAddress: from scottalvarez8287@gmail.com to nebolondicsal@nguyenvuquocanh.com. Success.
 00:03:49 - Contact Info Update - ObjectID: 265, PhoneNumber: from 126-187-5198 to 320-401-1385, EmailAddress: from tonyvazquez4853@gmail.com to nekropolis@becknellsbakery.com. Success.
+
+-- New log session created -- 
+14:32:22 - ID Update - ObjectID: 10. New ID already in use.
+14:32:23 - ID Update - ObjectID: 55, NewObjectID: 1631. Success.
+14:32:23 - ID Update - ObjectID: 340, NewObjectID: 2209. Success.
+14:32:23 - ID Update - ObjectID: 457, NewObjectID: 1236. Success.
+14:32:24 - ID Update - ObjectID: 506, NewObjectID: 2033. Success.
+14:32:24 - ID Update - ObjectID: 147, NewObjectID: 2401. Success.
+14:32:25 - ID Update - ObjectID: 574, NewObjectID: 1962. Success.
+14:32:25 - ID Update - ObjectID: 1070, NewObjectID: 1579. Success.
+14:32:25 - ID Update - ObjectID: 618. New ID already in use.
+14:32:26 - ID Update - ObjectID: 1326. Original ID not found.
+14:32:26 - ID Update - ObjectID: 104, NewObjectID: 1315. Success.
+14:32:27 - ID Update - ObjectID: 1472. Original ID not found.
+14:32:27 - ID Update - ObjectID: 1392. Original ID not found.
+14:32:27 - ID Update - ObjectID: 1481. Original ID not found.
+14:32:28 - ID Update - ObjectID: 182. New ID already in use.
+14:32:28 - ID Update - ObjectID: 29, NewObjectID: 2089. Success.
+14:32:29 - ID Update - ObjectID: 1485. Original ID not found.
+14:32:29 - ID Update - ObjectID: 499, NewObjectID: 1329. Success.
+14:32:29 - ID Update - ObjectID: 1475. Original ID not found.
+14:32:30 - ID Update - ObjectID: 171, NewObjectID: 2098. Success.
+14:32:30 - ID Update - ObjectID: 357, NewObjectID: 2203. Success.
+14:32:31 - ID Update - ObjectID: 358. New ID already in use.
+14:32:31 - ID Update - ObjectID: 1347. Original ID not found.
+14:32:32 - ID Update - ObjectID: 962, NewObjectID: 1527. Success.
+14:32:32 - ID Update - ObjectID: 627, NewObjectID: 1561. Success.
+14:32:32 - ID Update - ObjectID: 792, NewObjectID: 1234. Success.
+14:32:33 - ID Update - ObjectID: 650, NewObjectID: 2321. Success.
+14:32:33 - ID Update - ObjectID: 1431. Original ID not found.
+14:32:34 - ID Update - ObjectID: 740, NewObjectID: 2215. Success.
+14:32:34 - ID Update - ObjectID: 475, NewObjectID: 1630. Success.
+14:32:34 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -145.21829, Latitude: from 15.54 to -87.924355, AMSL: from 473.4 to 292.1136. Success.
+14:32:35 - Position Update - ObjectID: 1036, Longitude: from 41.5 to -115.52941, Latitude: from 52.68 to -65.998566, AMSL: from 3676.04 to 7409.812. Success.
+14:32:35 - Position Update - ObjectID: 1103, Longitude: from -118.53 to -67.17546, Latitude: from 66.04 to -59.330032, AMSL: from 3224.97 to 3202.3145. Success.
+14:32:36 - Position Update - ObjectID: 1088, Longitude: from 41.5 to 48.47077, Latitude: from 52.68 to 27.736376, AMSL: from 3676.04 to 9320.949. Success.
+14:32:36 - Position Update - ObjectID: 1000, Longitude: from 106.221436 to 15.235422, Latitude: from 5.831919 to 53.14479, AMSL: from 976.89136 to 9944.197. Success.
+14:32:36 - Position Update - ObjectID: 1175, Longitude: from 74.77 to -55.384537, Latitude: from 35.27 to 87.035736, AMSL: from 2570.73 to 2779.9148. Success.
+14:32:37 - Position Update - ObjectID: 1008, Longitude: from 41.5 to 96.664536, Latitude: from 52.68 to 56.606426, AMSL: from 3676.04 to 457.798. Success.
+14:32:37 - Position Update - ObjectID: 1013, Longitude: from 142.55435 to -146.93097, Latitude: from -0.8954649 to 54.21434, AMSL: from 1000.3534 to 7967.9062. Success.
+14:32:38 - Position Update - ObjectID: 984, Longitude: from 57.51982 to -171.53268, Latitude: from 38.44241 to -73.83688, AMSL: from 2523.1445 to 4522.8696. Success.
+14:32:38 - Position Update - ObjectID: 1143, Longitude: from -118.53 to -5.95481, Latitude: from 66.04 to -6.869265, AMSL: from 3224.97 to 9238.392. Success.
+14:32:38 - Position Update - ObjectID: 980, Longitude: from 72.13154 to -82.12707, Latitude: from 22.821297 to 1.479755, AMSL: from 2725.8232 to 444.67447. Success.
+14:32:39 - Position Update - ObjectID: 1019, Longitude: from 158.21 to -18.238646, Latitude: from -40.94 to 63.14051, AMSL: from 764.46 to 5672.0625. Success.
+14:32:39 - Position Update - ObjectID: 321. Object is not a Flight.
+14:32:40 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -108.147354, Latitude: from 15.54 to 27.09598, AMSL: from 473.4 to 3119.7957. Success.
+14:32:40 - Position Update - ObjectID: 1036, Longitude: from -115.52941 to -103.43464, Latitude: from -65.998566 to 60.96732, AMSL: from 7409.812 to 4672.3745. Success.
+14:32:40 - Position Update - ObjectID: 1103, Longitude: from -67.17546 to -161.88493, Latitude: from -59.330032 to -79.42511, AMSL: from 3202.3145 to 777.99915. Success.
+14:32:41 - Position Update - ObjectID: 1088, Longitude: from 48.47077 to -140.51558, Latitude: from 27.736376 to 81.17543, AMSL: from 9320.949 to 7980.634. Success.
+14:32:41 - Position Update - ObjectID: 1000, Longitude: from 15.444182 to -133.23634, Latitude: from 53.02419 to -13.053079, AMSL: from 9916.746 to 6928.403. Success.
+14:32:42 - Position Update - ObjectID: 1175, Longitude: from -55.384537 to 148.0308, Latitude: from 87.035736 to -66.756035, AMSL: from 2779.9148 to 5280.3286. Success.
+14:32:42 - Position Update - ObjectID: 1008, Longitude: from 41.5 to -54.132835, Latitude: from 52.68 to -10.536424, AMSL: from 3676.04 to 2296.8306. Success.
+14:32:43 - Position Update - ObjectID: 1013, Longitude: from -145.98042 to 33.84093, Latitude: from 54.10035 to 81.83095, AMSL: from 7945.815 to 676.9015. Success.
+14:32:43 - Position Update - ObjectID: 984, Longitude: from -171.07925 to 20.370777, Latitude: from -73.56759 to -67.73591, AMSL: from 4521.0674 to 2567.2583. Success.
+14:32:43 - Position Update - ObjectID: 1143, Longitude: from -5.95481 to -0.749077, Latitude: from -6.869265 to 20.052593, AMSL: from 9238.392 to 7839.941. Success.
+14:32:44 - Position Update - ObjectID: 980, Longitude: from -81.81877 to 139.57149, Latitude: from 1.6074358 to 63.623093, AMSL: from 452.73267 to 276.91754. Success.
+14:32:44 - Position Update - ObjectID: 1019, Longitude: from -18.238646 to 97.861275, Latitude: from 63.14051 to -53.845642, AMSL: from 5672.0625 to 3756.995. Success.
+14:32:45 - Position Update - ObjectID: 321. Object is not a Flight.
+14:32:45 - Position Update - ObjectID: 1073, Longitude: from 175.55 to 47.96795, Latitude: from 15.54 to -5.012481, AMSL: from 473.4 to 5423.5605. Success.
+14:32:45 - Position Update - ObjectID: 1036, Longitude: from -103.43464 to -24.074, Latitude: from 60.96732 to -12.826984, AMSL: from 4672.3745 to 6723.151. Success.
+14:32:46 - Position Update - ObjectID: 1103, Longitude: from -161.88493 to -108.28665, Latitude: from -79.42511 to -70.61774, AMSL: from 777.99915 to 2954.6252. Success.
+14:32:46 - Position Update - ObjectID: 1088, Longitude: from -140.51558 to -169.05829, Latitude: from 81.17543 to -8.535289, AMSL: from 7980.634 to 1039.7069. Success.
+14:32:47 - Position Update - ObjectID: 1000, Longitude: from -132.60394 to 140.71909, Latitude: from -12.985534 to -83.64768, AMSL: from 6909.4463 to 1392.2837. Success.
+14:32:47 - Position Update - ObjectID: 1175, Longitude: from 148.0308 to 155.66397, Latitude: from -66.756035 to 13.467536, AMSL: from 5280.3286 to 4464.936. Success.
+14:32:47 - Position Update - ObjectID: 1008, Longitude: from 41.5 to 13.895434, Latitude: from 52.68 to -63.151962, AMSL: from 3676.04 to 6397.2964. Success.
+14:32:48 - Position Update - ObjectID: 1013, Longitude: from 34.257774 to 32.557625, Latitude: from 81.63595 to 2.161791, AMSL: from 676.30286 to 2058.9192. Success.
+14:32:48 - Position Update - ObjectID: 984, Longitude: from 20.424671 to 35.00642, Latitude: from -67.42877 to -27.659632, AMSL: from 2570.0864 to 92.23284. Success.
+14:32:49 - Position Update - ObjectID: 1143, Longitude: from -0.749077 to -149.48839, Latitude: from 20.052593 to 20.7811, AMSL: from 7839.941 to 2120.0967. Success.
+14:32:49 - Position Update - ObjectID: 980, Longitude: from 139.32721 to -56.339127, Latitude: from 63.595833 to 42.637367, AMSL: from 285.38434 to 9883.734. Success.
+14:32:49 - Position Update - ObjectID: 1019, Longitude: from 97.861275 to -4.987317, Latitude: from -53.845642 to 21.58896, AMSL: from 3756.995 to 9201.4375. Success.
+14:32:50 - Contact Info Update - ObjectID: 234, PhoneNumber: from 366-468-9423 to 382-227-2487, EmailAddress: from jasoncook3575@gmail.com to hjghjchbxjgb@abilitys.site. Success.
+14:32:50 - Contact Info Update - ObjectID: 102, PhoneNumber: from 615-473-6079 to 383-287-1506, EmailAddress: from scottalvarez8287@gmail.com to nebolondicsal@nguyenvuquocanh.com. Success.
+14:32:51 - Contact Info Update - ObjectID: 265, PhoneNumber: from 126-187-5198 to 320-401-1385, EmailAddress: from tonyvazquez4853@gmail.com to nekropolis@becknellsbakery.com. Success.
+14:32:51 - Contact Info Update - ObjectID: 156, PhoneNumber: from 306-563-6137 to 153-734-8335, EmailAddress: from rebeccataylor6473@gmail.com to vicay2006@ebarg.net. Success.
+14:32:51 - Contact Info Update - ObjectID: 163, PhoneNumber: from 995-001-7129 to 633-644-7562, EmailAddress: from johnjohnson2797@gmail.com to judsuss@naverly.com. Success.
+14:32:52 - Contact Info Update - ObjectID: 264, PhoneNumber: from 134-860-8927 to 505-331-4035, EmailAddress: from coreythomas2128@gmail.com to gr8find@abilitys.site. Success.
+14:32:52 - Contact Info Update - ObjectID: 157, PhoneNumber: from 158-552-8728 to 132-878-5307, EmailAddress: from brianstephens694@gmail.com to jaclyn78@abilitys.site. Success.
+14:32:53 - Contact Info Update - ObjectID: 261, PhoneNumber: from 974-420-5409 to 430-361-7186, EmailAddress: from sarahhobbs1352@gmail.com to shaitis@centromedicoesteticodsagas.com. Success.
+14:32:53 - Contact Info Update - ObjectID: 251, PhoneNumber: from 833-252-8126 to 385-172-2321, EmailAddress: from rebeccadean4758@gmail.com to eyon@btcmod.com. Success.
+14:32:54 - Contact Info Update - ObjectID: 171. Object not found.
+14:32:54 - Contact Info Update - ObjectID: 115, PhoneNumber: from 463-722-9752 to 635-084-5411, EmailAddress: from philipbell3773@gmail.com to bevzsergey1972@domiaaan2.online. Success.
+14:32:54 - Contact Info Update - ObjectID: 144, PhoneNumber: from 614-203-0297 to 076-370-5877, EmailAddress: from paulmiller1295@gmail.com to ertan4@villastream.xyz. Success.
+14:32:55 - Contact Info Update - ObjectID: 154, PhoneNumber: from 906-465-6730 to 885-053-2101, EmailAddress: from aaronbeasley2512@gmail.com to voteforpablo@dealyaari.com. Success.
+14:32:55 - Contact Info Update - ObjectID: 281, PhoneNumber: from 626-752-6781 to 784-272-4668, EmailAddress: from kristenpeterson4653@gmail.com to saver7@degioparfume.com. Success.
+14:32:56 - Contact Info Update - ObjectID: 131, PhoneNumber: from 442-521-4222 to 070-023-1168, EmailAddress: from makaylavillanueva2283@gmail.com to strobl@rhafhamed.online. Success.
+14:32:56 - Contact Info Update - ObjectID: 223, PhoneNumber: from 807-553-9928 to 311-773-0422, EmailAddress: from andrewpark3633@gmail.com to ckwon@sdaouig2.shop. Success.
+14:32:56 - Contact Info Update - ObjectID: 248, PhoneNumber: from 346-535-4600 to 707-216-4622, EmailAddress: from johnwalker2730@gmail.com to sukur1995tm@havenbeat.com. Success.
+14:32:57 - Contact Info Update - ObjectID: 171. Object not found.
+14:32:57 - Contact Info Update - ObjectID: 270, PhoneNumber: from 901-436-5934 to 267-744-0251, EmailAddress: from vanessarivera411@gmail.com to heats302@supersetsbarbershop.com. Success.
+14:32:58 - Contact Info Update - ObjectID: 255, PhoneNumber: from 510-733-2602 to 368-463-7437, EmailAddress: from melissaroberts5088@gmail.com to s151236@alphabrc.com. Success.
+14:32:58 - Contact Info Update - ObjectID: 112, PhoneNumber: from 432-154-5129 to 064-178-6230, EmailAddress: from jamesrobertson4976@gmail.com to oksanahatipova@degioparfume.com. Success.
+14:32:58 - Contact Info Update - ObjectID: 250, PhoneNumber: from 767-761-2921 to 277-008-6812, EmailAddress: from davidmckenzie1667@gmail.com to alanste@koreaful.com. Success.
+14:32:59 - Contact Info Update - ObjectID: 268, PhoneNumber: from 953-026-9876 to 524-850-0158, EmailAddress: from jennifercastillo4844@gmail.com to lanselot095@alexcabrera.net. Success.
+14:32:59 - Contact Info Update - ObjectID: 148, PhoneNumber: from 236-702-8671 to 166-418-6830, EmailAddress: from chadlee7580@gmail.com to sleeepy3@sportscardsfanatics.com. Success.
+14:33:00 - Contact Info Update - ObjectID: 147. Object not found.
+14:33:00 - Contact Info Update - ObjectID: 239, PhoneNumber: from 625-332-7250 to 466-371-4357, EmailAddress: from carllove4204@gmail.com to varstar@sportscardsfanatics.com. Success.
+14:33:00 - Contact Info Update - ObjectID: 206, PhoneNumber: from 202-755-5253 to 431-481-8456, EmailAddress: from juliedunn154@gmail.com to deirdre10@speeddataanalytics.com. Success.
+14:33:01 - Contact Info Update - ObjectID: 281, PhoneNumber: from 784-272-4668 to 867-441-4812, EmailAddress: from saver7@degioparfume.com to nofear7@maintenances.us. Success.
+14:33:01 - Contact Info Update - ObjectID: 104. Object not found.
+14:33:02 - Contact Info Update - ObjectID: 247, PhoneNumber: from 377-170-6796 to 106-665-7586, EmailAddress: from carolynavila7464@gmail.com to nikitalykov74@kongtoan.com. Success.
+14:33:02 - Contact Info Update - ObjectID: 237, PhoneNumber: from 444-110-6050 to 673-107-2151, EmailAddress: from martinpope9837@gmail.com to mrmojo23@otpku.com. Success.
+14:33:02 - Contact Info Update - ObjectID: 295, PhoneNumber: from 697-311-9160 to 424-487-6120, EmailAddress: from veronicaanderson9326@gmail.com to aren01@muataikhoan.info. Success.
+14:33:03 - Contact Info Update - ObjectID: 122, PhoneNumber: from 499-280-0374 to 878-343-0016, EmailAddress: from laurenpreston1321@gmail.com to ggfre@domiaaan2.online. Success.
+14:33:03 - Contact Info Update - ObjectID: 127, PhoneNumber: from 898-187-5805 to 712-023-7872, EmailAddress: from sarahgibson2084@gmail.com to muhidshamsudinov@rftdsagfdsv.shop. Success.
+14:33:04 - Contact Info Update - ObjectID: 285, PhoneNumber: from 725-323-0429 to 063-852-3407, EmailAddress: from kevinlivingston7476@gmail.com to asiak@utplexpotrabajos.com. Success.
+14:33:04 - Contact Info Update - ObjectID: 115, PhoneNumber: from 635-084-5411 to 342-403-6232, EmailAddress: from bevzsergey1972@domiaaan2.online to rmbpjvc@mytempmail.org. Success.
+14:33:04 - Contact Info Update - ObjectID: 243, PhoneNumber: from 386-113-8841 to 578-537-2813, EmailAddress: from susangallegos1958@gmail.com to lance199115@utplexpotrabajos.com. Success.
+14:33:05 - Contact Info Update - ObjectID: 217, PhoneNumber: from 892-636-7255 to 872-423-1725, EmailAddress: from louisbeck2619@gmail.com to dawidklingbein@ranchodasimpex.com. Success.
+14:33:05 - Contact Info Update - ObjectID: 183, PhoneNumber: from 129-070-6493 to 043-566-5860, EmailAddress: from beckyherrera4947@gmail.com to gored47024@adsta415-674-2836m.com. Success.
+
+-- New log session created -- 
+14:33:51 - ID Update - ObjectID: 10. New ID already in use.
+14:33:52 - ID Update - ObjectID: 55, NewObjectID: 1631. Success.
+14:33:52 - ID Update - ObjectID: 340, NewObjectID: 2209. Success.
+14:33:53 - ID Update - ObjectID: 457, NewObjectID: 1236. Success.
+14:33:53 - ID Update - ObjectID: 506, NewObjectID: 2033. Success.
+14:33:53 - ID Update - ObjectID: 147, NewObjectID: 2401. Success.
+14:33:54 - ID Update - ObjectID: 574, NewObjectID: 1962. Success.
+14:33:54 - ID Update - ObjectID: 1070, NewObjectID: 1579. Success.
+14:33:55 - ID Update - ObjectID: 618. New ID already in use.
+14:33:55 - ID Update - ObjectID: 1326. Original ID not found.
+14:33:55 - ID Update - ObjectID: 104, NewObjectID: 1315. Success.
+14:33:56 - ID Update - ObjectID: 1472. Original ID not found.
+14:33:56 - ID Update - ObjectID: 1392. Original ID not found.
+14:33:57 - ID Update - ObjectID: 1481. Original ID not found.
+14:33:57 - ID Update - ObjectID: 182. New ID already in use.
+14:33:57 - ID Update - ObjectID: 29, NewObjectID: 2089. Success.
+14:33:58 - ID Update - ObjectID: 1485. Original ID not found.
+14:33:58 - ID Update - ObjectID: 499, NewObjectID: 1329. Success.
+14:33:59 - ID Update - ObjectID: 1475. Original ID not found.
+14:33:59 - ID Update - ObjectID: 171, NewObjectID: 2098. Success.
+14:33:59 - ID Update - ObjectID: 357, NewObjectID: 2203. Success.
+14:34:00 - ID Update - ObjectID: 358. New ID already in use.
+14:34:00 - ID Update - ObjectID: 1347. Original ID not found.
+14:34:01 - ID Update - ObjectID: 962, NewObjectID: 1527. Success.
+14:34:01 - ID Update - ObjectID: 627, NewObjectID: 1561. Success.
+14:34:02 - ID Update - ObjectID: 792, NewObjectID: 1234. Success.
+14:34:02 - ID Update - ObjectID: 650, NewObjectID: 2321. Success.
+14:34:02 - ID Update - ObjectID: 1431. Original ID not found.
+14:34:03 - ID Update - ObjectID: 740, NewObjectID: 2215. Success.
+14:34:03 - ID Update - ObjectID: 475, NewObjectID: 1630. Success.
+14:34:04 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -145.21829, Latitude: from 15.54 to -87.924355, AMSL: from 473.4 to 292.1136. Success.
+14:34:04 - Position Update - ObjectID: 1036, Longitude: from 41.5 to -115.52941, Latitude: from 52.68 to -65.998566, AMSL: from 3676.04 to 7409.812. Success.
+14:34:04 - Position Update - ObjectID: 1103, Longitude: from -118.53 to -67.17546, Latitude: from 66.04 to -59.330032, AMSL: from 3224.97 to 3202.3145. Success.
+14:34:05 - Position Update - ObjectID: 1088, Longitude: from 41.5 to 48.47077, Latitude: from 52.68 to 27.736376, AMSL: from 3676.04 to 9320.949. Success.
+14:34:05 - Position Update - ObjectID: 1000, Longitude: from 106.16875 to 15.235422, Latitude: from 5.846507 to 53.14479, AMSL: from 974.76587 to 9944.197. Success.
+14:34:06 - Position Update - ObjectID: 1175, Longitude: from 74.77 to -55.384537, Latitude: from 35.27 to 87.035736, AMSL: from 2570.73 to 2779.9148. Success.
+14:34:06 - Position Update - ObjectID: 1008, Longitude: from 41.5 to 96.664536, Latitude: from 52.68 to 56.606426, AMSL: from 3676.04 to 457.798. Success.
+14:34:06 - Position Update - ObjectID: 1013, Longitude: from 142.71785 to -146.93097, Latitude: from -0.814032 to 54.21434, AMSL: from 997.74243 to 7967.9062. Success.
+14:34:07 - Position Update - ObjectID: 984, Longitude: from 57.340027 to -171.53268, Latitude: from 38.60222 to -73.83688, AMSL: from 2536.0847 to 4522.8696. Success.
+14:34:07 - Position Update - ObjectID: 1143, Longitude: from -118.53 to -5.95481, Latitude: from 66.04 to -6.869265, AMSL: from 3224.97 to 9238.392. Success.
+14:34:08 - Position Update - ObjectID: 980, Longitude: from 71.86271 to -82.12707, Latitude: from 23.083351 to 1.479755, AMSL: from 2734.163 to 444.67447. Success.
+14:34:08 - Position Update - ObjectID: 1019, Longitude: from 158.21 to -18.238646, Latitude: from -40.94 to 63.14051, AMSL: from 764.46 to 5672.0625. Success.
+14:34:08 - Position Update - ObjectID: 321. Object is not a Flight.
+14:34:09 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -108.147354, Latitude: from 15.54 to 27.09598, AMSL: from 473.4 to 3119.7957. Success.
+14:34:09 - Position Update - ObjectID: 1036, Longitude: from -115.52941 to -103.43464, Latitude: from -65.998566 to 60.96732, AMSL: from 7409.812 to 4672.3745. Success.
+14:34:10 - Position Update - ObjectID: 1103, Longitude: from -67.17546 to -161.88493, Latitude: from -59.330032 to -79.42511, AMSL: from 3202.3145 to 777.99915. Success.
+14:34:10 - Position Update - ObjectID: 1088, Longitude: from 48.47077 to -140.51558, Latitude: from 27.736376 to 81.17543, AMSL: from 9320.949 to 7980.634. Success.
+14:34:10 - Position Update - ObjectID: 1000, Longitude: from 15.443354 to -133.23634, Latitude: from 53.024673 to -13.053079, AMSL: from 9916.855 to 6928.403. Success.
+14:34:11 - Position Update - ObjectID: 1175, Longitude: from -55.384537 to 148.0308, Latitude: from 87.035736 to -66.756035, AMSL: from 2779.9148 to 5280.3286. Success.
+14:34:11 - Position Update - ObjectID: 1008, Longitude: from 41.5 to -54.132835, Latitude: from 52.68 to -10.536424, AMSL: from 3676.04 to 2296.8306. Success.
+14:34:12 - Position Update - ObjectID: 1013, Longitude: from -145.988 to 33.84093, Latitude: from 54.101254 to 81.83095, AMSL: from 7945.992 to 676.9015. Success.
+14:34:12 - Position Update - ObjectID: 984, Longitude: from -171.08298 to 20.370777, Latitude: from -73.56982 to -67.73591, AMSL: from 4521.0825 to 2567.2583. Success.
+14:34:13 - Position Update - ObjectID: 1143, Longitude: from -5.95481 to -0.749077, Latitude: from -6.869265 to 20.052593, AMSL: from 9238.392 to 7839.941. Success.
+14:34:13 - Position Update - ObjectID: 980, Longitude: from -81.82186 to 139.57149, Latitude: from 1.6061578 to 63.623093, AMSL: from 452.65198 to 276.91754. Success.
+14:34:13 - Position Update - ObjectID: 1019, Longitude: from -18.238646 to 97.861275, Latitude: from 63.14051 to -53.845642, AMSL: from 5672.0625 to 3756.995. Success.
+14:34:14 - Position Update - ObjectID: 321. Object is not a Flight.
+14:34:14 - Position Update - ObjectID: 1073, Longitude: from 175.55 to 47.96795, Latitude: from 15.54 to -5.012481, AMSL: from 473.4 to 5423.5605. Success.
+14:34:15 - Position Update - ObjectID: 1036, Longitude: from -103.43464 to -24.074, Latitude: from 60.96732 to -12.826984, AMSL: from 4672.3745 to 6723.151. Success.
+14:34:15 - Position Update - ObjectID: 1103, Longitude: from -161.88493 to -108.28665, Latitude: from -79.42511 to -70.61774, AMSL: from 777.99915 to 2954.6252. Success.
+14:34:15 - Position Update - ObjectID: 1088, Longitude: from -140.51558 to -169.05829, Latitude: from 81.17543 to -8.535289, AMSL: from 7980.634 to 1039.7069. Success.
+14:34:16 - Position Update - ObjectID: 1000, Longitude: from -132.60864 to 140.71909, Latitude: from -12.986034 to -83.64768, AMSL: from 6909.5874 to 1392.2837. Success.
+14:34:16 - Position Update - ObjectID: 1175, Longitude: from 148.0308 to 155.66397, Latitude: from -66.756035 to 13.467536, AMSL: from 5280.3286 to 4464.936. Success.
+14:34:17 - Position Update - ObjectID: 1008, Longitude: from 41.5 to 13.895434, Latitude: from 52.68 to -63.151962, AMSL: from 3676.04 to 6397.2964. Success.
+14:34:17 - Position Update - ObjectID: 1013, Longitude: from 34.254997 to 32.557625, Latitude: from 81.63725 to 2.161791, AMSL: from 676.3069 to 2058.9192. Success.
+14:34:17 - Position Update - ObjectID: 984, Longitude: from 20.424305 to 35.00642, Latitude: from -67.43085 to -27.659632, AMSL: from 2570.0674 to 92.23284. Success.
+14:34:18 - Position Update - ObjectID: 1143, Longitude: from -0.749077 to -149.48839, Latitude: from 20.052593 to 20.7811, AMSL: from 7839.941 to 2120.0967. Success.
+14:34:18 - Position Update - ObjectID: 980, Longitude: from 139.28058 to -56.339127, Latitude: from 63.59063 to 42.637367, AMSL: from 287.00046 to 9883.734. Success.
+14:34:19 - Position Update - ObjectID: 1019, Longitude: from 97.861275 to -4.987317, Latitude: from -53.845642 to 21.58896, AMSL: from 3756.995 to 9201.4375. Success.
+14:34:19 - Contact Info Update - ObjectID: 234, PhoneNumber: from 366-468-9423 to 382-227-2487, EmailAddress: from jasoncook3575@gmail.com to hjghjchbxjgb@abilitys.site. Success.
+14:34:19 - Contact Info Update - ObjectID: 102, PhoneNumber: from 615-473-6079 to 383-287-1506, EmailAddress: from scottalvarez8287@gmail.com to nebolondicsal@nguyenvuquocanh.com. Success.
+14:34:20 - Contact Info Update - ObjectID: 265, PhoneNumber: from 126-187-5198 to 320-401-1385, EmailAddress: from tonyvazquez4853@gmail.com to nekropolis@becknellsbakery.com. Success.
+14:34:20 - Contact Info Update - ObjectID: 156, PhoneNumber: from 306-563-6137 to 153-734-8335, EmailAddress: from rebeccataylor6473@gmail.com to vicay2006@ebarg.net. Success.
+14:34:21 - Contact Info Update - ObjectID: 163, PhoneNumber: from 995-001-7129 to 633-644-7562, EmailAddress: from johnjohnson2797@gmail.com to judsuss@naverly.com. Success.
+14:34:21 - Contact Info Update - ObjectID: 264, PhoneNumber: from 134-860-8927 to 505-331-4035, EmailAddress: from coreythomas2128@gmail.com to gr8find@abilitys.site. Success.
+14:34:21 - Contact Info Update - ObjectID: 157, PhoneNumber: from 158-552-8728 to 132-878-5307, EmailAddress: from brianstephens694@gmail.com to jaclyn78@abilitys.site. Success.
+14:34:22 - Contact Info Update - ObjectID: 261, PhoneNumber: from 974-420-5409 to 430-361-7186, EmailAddress: from sarahhobbs1352@gmail.com to shaitis@centromedicoesteticodsagas.com. Success.
+14:34:22 - Contact Info Update - ObjectID: 251, PhoneNumber: from 833-252-8126 to 385-172-2321, EmailAddress: from rebeccadean4758@gmail.com to eyon@btcmod.com. Success.
+14:34:23 - Contact Info Update - ObjectID: 171. Object not found.
+14:34:23 - Contact Info Update - ObjectID: 115, PhoneNumber: from 463-722-9752 to 635-084-5411, EmailAddress: from philipbell3773@gmail.com to bevzsergey1972@domiaaan2.online. Success.
+14:34:23 - Contact Info Update - ObjectID: 144, PhoneNumber: from 614-203-0297 to 076-370-5877, EmailAddress: from paulmiller1295@gmail.com to ertan4@villastream.xyz. Success.
+14:34:24 - Contact Info Update - ObjectID: 154, PhoneNumber: from 906-465-6730 to 885-053-2101, EmailAddress: from aaronbeasley2512@gmail.com to voteforpablo@dealyaari.com. Success.
+14:34:24 - Contact Info Update - ObjectID: 281, PhoneNumber: from 626-752-6781 to 784-272-4668, EmailAddress: from kristenpeterson4653@gmail.com to saver7@degioparfume.com. Success.
+14:34:25 - Contact Info Update - ObjectID: 131, PhoneNumber: from 442-521-4222 to 070-023-1168, EmailAddress: from makaylavillanueva2283@gmail.com to strobl@rhafhamed.online. Success.
+14:34:25 - Contact Info Update - ObjectID: 223, PhoneNumber: from 807-553-9928 to 311-773-0422, EmailAddress: from andrewpark3633@gmail.com to ckwon@sdaouig2.shop. Success.
+14:34:25 - Contact Info Update - ObjectID: 248, PhoneNumber: from 346-535-4600 to 707-216-4622, EmailAddress: from johnwalker2730@gmail.com to sukur1995tm@havenbeat.com. Success.
+14:34:26 - Contact Info Update - ObjectID: 171. Object not found.
+14:34:26 - Contact Info Update - ObjectID: 270, PhoneNumber: from 901-436-5934 to 267-744-0251, EmailAddress: from vanessarivera411@gmail.com to heats302@supersetsbarbershop.com. Success.
+14:34:27 - Contact Info Update - ObjectID: 255, PhoneNumber: from 510-733-2602 to 368-463-7437, EmailAddress: from melissaroberts5088@gmail.com to s151236@alphabrc.com. Success.
+14:34:27 - Contact Info Update - ObjectID: 112, PhoneNumber: from 432-154-5129 to 064-178-6230, EmailAddress: from jamesrobertson4976@gmail.com to oksanahatipova@degioparfume.com. Success.
+14:34:28 - Contact Info Update - ObjectID: 250, PhoneNumber: from 767-761-2921 to 277-008-6812, EmailAddress: from davidmckenzie1667@gmail.com to alanste@koreaful.com. Success.
+14:34:28 - Contact Info Update - ObjectID: 268, PhoneNumber: from 953-026-9876 to 524-850-0158, EmailAddress: from jennifercastillo4844@gmail.com to lanselot095@alexcabrera.net. Success.
+14:34:28 - Contact Info Update - ObjectID: 148, PhoneNumber: from 236-702-8671 to 166-418-6830, EmailAddress: from chadlee7580@gmail.com to sleeepy3@sportscardsfanatics.com. Success.
+14:34:29 - Contact Info Update - ObjectID: 147. Object not found.
+14:34:29 - Contact Info Update - ObjectID: 239, PhoneNumber: from 625-332-7250 to 466-371-4357, EmailAddress: from carllove4204@gmail.com to varstar@sportscardsfanatics.com. Success.
+14:34:30 - Contact Info Update - ObjectID: 206, PhoneNumber: from 202-755-5253 to 431-481-8456, EmailAddress: from juliedunn154@gmail.com to deirdre10@speeddataanalytics.com. Success.
+14:34:30 - Contact Info Update - ObjectID: 281, PhoneNumber: from 784-272-4668 to 867-441-4812, EmailAddress: from saver7@degioparfume.com to nofear7@maintenances.us. Success.
+14:34:30 - Contact Info Update - ObjectID: 104. Object not found.
+14:34:31 - Contact Info Update - ObjectID: 247, PhoneNumber: from 377-170-6796 to 106-665-7586, EmailAddress: from carolynavila7464@gmail.com to nikitalykov74@kongtoan.com. Success.
+14:34:31 - Contact Info Update - ObjectID: 237, PhoneNumber: from 444-110-6050 to 673-107-2151, EmailAddress: from martinpope9837@gmail.com to mrmojo23@otpku.com. Success.
+14:34:32 - Contact Info Update - ObjectID: 295, PhoneNumber: from 697-311-9160 to 424-487-6120, EmailAddress: from veronicaanderson9326@gmail.com to aren01@muataikhoan.info. Success.
+14:34:32 - Contact Info Update - ObjectID: 122, PhoneNumber: from 499-280-0374 to 878-343-0016, EmailAddress: from laurenpreston1321@gmail.com to ggfre@domiaaan2.online. Success.
+14:34:32 - Contact Info Update - ObjectID: 127, PhoneNumber: from 898-187-5805 to 712-023-7872, EmailAddress: from sarahgibson2084@gmail.com to muhidshamsudinov@rftdsagfdsv.shop. Success.
+14:34:33 - Contact Info Update - ObjectID: 285, PhoneNumber: from 725-323-0429 to 063-852-3407, EmailAddress: from kevinlivingston7476@gmail.com to asiak@utplexpotrabajos.com. Success.
+14:34:33 - Contact Info Update - ObjectID: 115, PhoneNumber: from 635-084-5411 to 342-403-6232, EmailAddress: from bevzsergey1972@domiaaan2.online to rmbpjvc@mytempmail.org. Success.
+14:34:34 - Contact Info Update - ObjectID: 243, PhoneNumber: from 386-113-8841 to 578-537-2813, EmailAddress: from susangallegos1958@gmail.com to lance199115@utplexpotrabajos.com. Success.
+14:34:34 - Contact Info Update - ObjectID: 217, PhoneNumber: from 892-636-7255 to 872-423-1725, EmailAddress: from louisbeck2619@gmail.com to dawidklingbein@ranchodasimpex.com. Success.
+14:34:34 - Contact Info Update - ObjectID: 183, PhoneNumber: from 129-070-6493 to 043-566-5860, EmailAddress: from beckyherrera4947@gmail.com to gored47024@adsta415-674-2836m.com. Success.
+
+-- New log session created -- 
+14:42:55 - ID Update - ObjectID: 10. New ID already in use.
+14:42:55 - ID Update - ObjectID: 55, NewObjectID: 1631. Success.
+14:42:56 - ID Update - ObjectID: 340, NewObjectID: 2209. Success.
+14:42:56 - ID Update - ObjectID: 457, NewObjectID: 1236. Success.
+14:42:57 - ID Update - ObjectID: 506, NewObjectID: 2033. Success.
+14:42:57 - ID Update - ObjectID: 147, NewObjectID: 2401. Success.
+14:42:57 - ID Update - ObjectID: 574, NewObjectID: 1962. Success.
+14:42:58 - ID Update - ObjectID: 1070, NewObjectID: 1579. Success.
+14:42:58 - ID Update - ObjectID: 618. New ID already in use.
+14:42:59 - ID Update - ObjectID: 1326. Original ID not found.
+14:42:59 - ID Update - ObjectID: 104, NewObjectID: 1315. Success.
+14:42:59 - ID Update - ObjectID: 1472. Original ID not found.
+14:43:00 - ID Update - ObjectID: 1392. Original ID not found.
+14:43:00 - ID Update - ObjectID: 1481. Original ID not found.
+14:43:01 - ID Update - ObjectID: 182. New ID already in use.
+14:43:01 - ID Update - ObjectID: 29, NewObjectID: 2089. Success.
+14:43:01 - ID Update - ObjectID: 1485. Original ID not found.
+14:43:02 - ID Update - ObjectID: 499, NewObjectID: 1329. Success.
+14:43:02 - ID Update - ObjectID: 1475. Original ID not found.
+14:43:03 - ID Update - ObjectID: 171, NewObjectID: 2098. Success.
+14:43:03 - ID Update - ObjectID: 357, NewObjectID: 2203. Success.
+14:43:03 - ID Update - ObjectID: 358. New ID already in use.
+14:43:04 - ID Update - ObjectID: 1347. Original ID not found.
+14:43:04 - ID Update - ObjectID: 962, NewObjectID: 1527. Success.
+14:43:05 - ID Update - ObjectID: 627, NewObjectID: 1561. Success.
+14:43:05 - ID Update - ObjectID: 792, NewObjectID: 1234. Success.
+14:43:05 - ID Update - ObjectID: 650, NewObjectID: 2321. Success.
+14:43:06 - ID Update - ObjectID: 1431. Original ID not found.
+14:43:06 - ID Update - ObjectID: 740, NewObjectID: 2215. Success.
+14:43:07 - ID Update - ObjectID: 475, NewObjectID: 1630. Success.
+14:43:07 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -145.21829, Latitude: from 15.54 to -87.924355, AMSL: from 473.4 to 292.1136. Success.
+14:43:08 - Position Update - ObjectID: 1036, Longitude: from 41.5 to -115.52941, Latitude: from 52.68 to -65.998566, AMSL: from 3676.04 to 7409.812. Success.
+14:43:08 - Position Update - ObjectID: 1103, Longitude: from -118.53 to -67.17546, Latitude: from 66.04 to -59.330032, AMSL: from 3224.97 to 3202.3145. Success.
+14:43:08 - Position Update - ObjectID: 1088, Longitude: from 41.5 to 48.47077, Latitude: from 52.68 to 27.736376, AMSL: from 3676.04 to 9320.949. Success.
+14:43:09 - Position Update - ObjectID: 1000, Longitude: from 105.84437 to 15.235422, Latitude: from 5.9363003 to 53.14479, AMSL: from 961.68304 to 9944.197. Success.
+14:43:09 - Position Update - ObjectID: 1175, Longitude: from 74.77 to -55.384537, Latitude: from 35.27 to 87.035736, AMSL: from 2570.73 to 2779.9148. Success.
+14:43:10 - Position Update - ObjectID: 1008, Longitude: from 41.5 to 96.664536, Latitude: from 52.68 to 56.606426, AMSL: from 3676.04 to 457.798. Success.
+14:43:10 - Position Update - ObjectID: 1013, Longitude: from 143.7226 to -146.93097, Latitude: from -0.31354788 to 54.21434, AMSL: from 981.6959 to 7967.9062. Success.
+14:43:10 - Position Update - ObjectID: 984, Longitude: from 56.24075 to -171.53268, Latitude: from 39.57918 to -73.83688, AMSL: from 2615.1953 to 4522.8696. Success.
+14:43:11 - Position Update - ObjectID: 1143, Longitude: from -118.53 to -5.95481, Latitude: from 66.04 to -6.869265, AMSL: from 3224.97 to 9238.392. Success.
+14:43:11 - Position Update - ObjectID: 980, Longitude: from 70.21668 to -82.12707, Latitude: from 24.687855 to 1.479755, AMSL: from 2785.2249 to 444.67447. Success.
+14:43:12 - Position Update - ObjectID: 1019, Longitude: from 158.21 to -18.238646, Latitude: from -40.94 to 63.14051, AMSL: from 764.46 to 5672.0625. Success.
+14:43:12 - Position Update - ObjectID: 321. Object is not a Flight.
+14:43:12 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -108.147354, Latitude: from 15.54 to 27.09598, AMSL: from 473.4 to 3119.7957. Success.
+14:43:13 - Position Update - ObjectID: 1036, Longitude: from -115.52941 to -103.43464, Latitude: from -65.998566 to 60.96732, AMSL: from 7409.812 to 4672.3745. Success.
+14:43:13 - Position Update - ObjectID: 1103, Longitude: from -67.17546 to -161.88493, Latitude: from -59.330032 to -79.42511, AMSL: from 3202.3145 to 777.99915. Success.
+14:43:14 - Position Update - ObjectID: 1088, Longitude: from 48.47077 to -140.51558, Latitude: from 27.736376 to 81.17543, AMSL: from 9320.949 to 7980.634. Success.
+14:43:14 - Position Update - ObjectID: 1000, Longitude: from 15.439268 to -133.23634, Latitude: from 53.02703 to -13.053079, AMSL: from 9917.394 to 6928.403. Success.
+14:43:14 - Position Update - ObjectID: 1175, Longitude: from -55.384537 to 148.0308, Latitude: from 87.035736 to -66.756035, AMSL: from 2779.9148 to 5280.3286. Success.
+14:43:15 - Position Update - ObjectID: 1008, Longitude: from 41.5 to -54.132835, Latitude: from 52.68 to -10.536424, AMSL: from 3676.04 to 2296.8306. Success.
+14:43:15 - Position Update - ObjectID: 1013, Longitude: from -146.01993 to 33.84093, Latitude: from 54.10508 to 81.83095, AMSL: from 7946.7334 to 676.9015. Success.
+14:43:16 - Position Update - ObjectID: 984, Longitude: from -171.09892 to 20.370777, Latitude: from -73.57929 to -67.73591, AMSL: from 4521.145 to 2567.2583. Success.
+14:43:16 - Position Update - ObjectID: 1143, Longitude: from -5.95481 to -0.749077, Latitude: from -6.869265 to 20.052593, AMSL: from 9238.392 to 7839.941. Success.
+
+-- New log session created -- 
+14:44:28 - ID Update - ObjectID: 10. New ID already in use.
+14:44:29 - ID Update - ObjectID: 55, NewObjectID: 1631. Success.
+14:44:29 - ID Update - ObjectID: 340, NewObjectID: 2209. Success.
+14:44:29 - ID Update - ObjectID: 457, NewObjectID: 1236. Success.
+14:44:30 - ID Update - ObjectID: 506, NewObjectID: 2033. Success.
+14:44:30 - ID Update - ObjectID: 147, NewObjectID: 2401. Success.
+14:44:31 - ID Update - ObjectID: 574, NewObjectID: 1962. Success.
+14:44:31 - ID Update - ObjectID: 1070, NewObjectID: 1579. Success.
+14:44:31 - ID Update - ObjectID: 618. New ID already in use.
+14:44:32 - ID Update - ObjectID: 1326. Original ID not found.
+14:44:32 - ID Update - ObjectID: 104, NewObjectID: 1315. Success.
+14:44:33 - ID Update - ObjectID: 1472. Original ID not found.
+14:44:33 - ID Update - ObjectID: 1392. Original ID not found.
+14:44:33 - ID Update - ObjectID: 1481. Original ID not found.
+14:44:34 - ID Update - ObjectID: 182. New ID already in use.
+14:44:34 - ID Update - ObjectID: 29, NewObjectID: 2089. Success.
+14:44:35 - ID Update - ObjectID: 1485. Original ID not found.
+14:44:35 - ID Update - ObjectID: 499, NewObjectID: 1329. Success.
+14:44:35 - ID Update - ObjectID: 1475. Original ID not found.
+14:44:36 - ID Update - ObjectID: 171, NewObjectID: 2098. Success.
+14:44:36 - ID Update - ObjectID: 357, NewObjectID: 2203. Success.
+14:44:37 - ID Update - ObjectID: 358. New ID already in use.
+14:44:37 - ID Update - ObjectID: 1347. Original ID not found.
+14:44:37 - ID Update - ObjectID: 962, NewObjectID: 1527. Success.
+14:44:38 - ID Update - ObjectID: 627, NewObjectID: 1561. Success.
+14:44:38 - ID Update - ObjectID: 792, NewObjectID: 1234. Success.
+14:44:39 - ID Update - ObjectID: 650, NewObjectID: 2321. Success.
+14:44:39 - ID Update - ObjectID: 1431. Original ID not found.
+14:44:40 - ID Update - ObjectID: 740, NewObjectID: 2215. Success.
+14:44:40 - ID Update - ObjectID: 475, NewObjectID: 1630. Success.
+14:44:40 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -145.21829, Latitude: from 15.54 to -87.924355, AMSL: from 473.4 to 292.1136. Success.
+14:44:41 - Position Update - ObjectID: 1036, Longitude: from 41.5 to -115.52941, Latitude: from 52.68 to -65.998566, AMSL: from 3676.04 to 7409.812. Success.
+14:44:41 - Position Update - ObjectID: 1103, Longitude: from -118.53 to -67.17546, Latitude: from 66.04 to -59.330032, AMSL: from 3224.97 to 3202.3145. Success.
+14:44:42 - Position Update - ObjectID: 1088, Longitude: from 41.5 to 48.47077, Latitude: from 52.68 to 27.736376, AMSL: from 3676.04 to 9320.949. Success.
+14:44:42 - Position Update - ObjectID: 1000, Longitude: from 105.79686 to 15.235422, Latitude: from 5.949453 to 53.14479, AMSL: from 959.767 to 9944.197. Success.
+14:44:42 - Position Update - ObjectID: 1175, Longitude: from 74.77 to -55.384537, Latitude: from 35.27 to 87.035736, AMSL: from 2570.73 to 2779.9148. Success.
+14:44:43 - Position Update - ObjectID: 1008, Longitude: from 41.5 to 96.664536, Latitude: from 52.68 to 56.606426, AMSL: from 3676.04 to 457.798. Success.
+14:44:43 - Position Update - ObjectID: 1013, Longitude: from 143.89749 to -146.93097, Latitude: from -0.22644812 to 54.21434, AMSL: from 978.9033 to 7967.9062. Success.
+14:44:44 - Position Update - ObjectID: 984, Longitude: from 56.05142 to -171.53268, Latitude: from 39.747463 to -73.83688, AMSL: from 2628.822 to 4522.8696. Success.
+14:44:44 - Position Update - ObjectID: 1143, Longitude: from -118.53 to -5.95481, Latitude: from 66.04 to -6.869265, AMSL: from 3224.97 to 9238.392. Success.
+14:44:44 - Position Update - ObjectID: 980, Longitude: from 69.93242 to -82.12707, Latitude: from 24.964933 to 1.479755, AMSL: from 2794.043 to 444.67447. Success.
+14:44:45 - Position Update - ObjectID: 1019, Longitude: from 158.21 to -18.238646, Latitude: from -40.94 to 63.14051, AMSL: from 764.46 to 5672.0625. Success.
+14:44:45 - Position Update - ObjectID: 321. Object is not a Flight.
+14:44:46 - Position Update - ObjectID: 1073, Longitude: from 175.55 to -108.147354, Latitude: from 15.54 to 27.09598, AMSL: from 473.4 to 3119.7957. Success.
+14:44:46 - Position Update - ObjectID: 1036, Longitude: from -115.52941 to -103.43464, Latitude: from -65.998566 to 60.96732, AMSL: from 7409.812 to 4672.3745. Success.
+14:44:46 - Position Update - ObjectID: 1103, Longitude: from -67.17546 to -161.88493, Latitude: from -59.330032 to -79.42511, AMSL: from 3202.3145 to 777.99915. Success.
+14:44:47 - Position Update - ObjectID: 1088, Longitude: from 48.47077 to -140.51558, Latitude: from 27.736376 to 81.17543, AMSL: from 9320.949 to 7980.634. Success.
+14:44:47 - Position Update - ObjectID: 1000, Longitude: from 15.439773 to -133.23634, Latitude: from 53.026745 to -13.053079, AMSL: from 9917.325 to 6928.403. Success.
+14:44:48 - Position Update - ObjectID: 1175, Longitude: from -55.384537 to 148.0308, Latitude: from 87.035736 to -66.756035, AMSL: from 2779.9148 to 5280.3286. Success.
+14:44:48 - Position Update - ObjectID: 1008, Longitude: from 41.5 to -54.132835, Latitude: from 52.68 to -10.536424, AMSL: from 3676.04 to 2296.8306. Success.
+14:44:48 - Position Update - ObjectID: 1013, Longitude: from -146.0213 to 33.84093, Latitude: from 54.105247 to 81.83095, AMSL: from 7946.765 to 676.9015. Success.
+14:44:49 - Position Update - ObjectID: 984, Longitude: from -171.0997 to 20.370777, Latitude: from -73.579735 to -67.73591, AMSL: from 4521.148 to 2567.2583. Success.
+14:44:49 - Position Update - ObjectID: 1143, Longitude: from -5.95481 to -0.749077, Latitude: from -6.869265 to 20.052593, AMSL: from 9238.392 to 7839.941. Success.
+14:44:50 - Position Update - ObjectID: 980, Longitude: from -81.83508 to 139.57149, Latitude: from 1.6006839 to 63.623093, AMSL: from 452.30655 to 276.91754. Success.
+14:44:50 - Position Update - ObjectID: 1019, Longitude: from -18.238646 to 97.861275, Latitude: from 63.14051 to -53.845642, AMSL: from 5672.0625 to 3756.995. Success.
+14:44:50 - Position Update - ObjectID: 321. Object is not a Flight.
+14:44:51 - Position Update - ObjectID: 1073, Longitude: from 175.55 to 47.96795, Latitude: from 15.54 to -5.012481, AMSL: from 473.4 to 5423.5605. Success.
+14:44:51 - Position Update - ObjectID: 1036, Longitude: from -103.43464 to -24.074, Latitude: from 60.96732 to -12.826984, AMSL: from 4672.3745 to 6723.151. Success.
+14:44:52 - Position Update - ObjectID: 1103, Longitude: from -161.88493 to -108.28665, Latitude: from -79.42511 to -70.61774, AMSL: from 777.99915 to 2954.6252. Success.
+14:44:52 - Position Update - ObjectID: 1088, Longitude: from -140.51558 to -169.05829, Latitude: from 81.17543 to -8.535289, AMSL: from 7980.634 to 1039.7069. Success.
+14:44:52 - Position Update - ObjectID: 1000, Longitude: from -132.62224 to 140.71909, Latitude: from -12.987489 to -83.64768, AMSL: from 6909.9956 to 1392.2837. Success.
+14:44:53 - Position Update - ObjectID: 1175, Longitude: from 148.0308 to 155.66397, Latitude: from -66.756035 to 13.467536, AMSL: from 5280.3286 to 4464.936. Success.
+14:44:53 - Position Update - ObjectID: 1008, Longitude: from 41.5 to 13.895434, Latitude: from 52.68 to -63.151962, AMSL: from 3676.04 to 6397.2964. Success.
+14:44:54 - Position Update - ObjectID: 1013, Longitude: from 34.23932 to 32.557625, Latitude: from 81.644585 to 2.161791, AMSL: from 676.32947 to 2058.9192. Success.
+14:44:54 - Position Update - ObjectID: 984, Longitude: from 20.422117 to 35.00642, Latitude: from -67.44333 to -27.659632, AMSL: from 2569.9524 to 92.23284. Success.
+14:44:55 - Position Update - ObjectID: 1143, Longitude: from -0.749077 to -149.48839, Latitude: from 20.052593 to 20.7811, AMSL: from 7839.941 to 2120.0967. Success.
+14:44:55 - Position Update - ObjectID: 980, Longitude: from 139.3409 to -56.339127, Latitude: from 63.597363 to 42.637367, AMSL: from 284.90942 to 9883.734. Success.
+14:44:55 - Position Update - ObjectID: 1019, Longitude: from 97.861275 to -4.987317, Latitude: from -53.845642 to 21.58896, AMSL: from 3756.995 to 9201.4375. Success.
+14:44:56 - Contact Info Update - ObjectID: 234, PhoneNumber: from 366-468-9423 to 382-227-2487, EmailAddress: from jasoncook3575@gmail.com to hjghjchbxjgb@abilitys.site. Success.
+14:44:56 - Contact Info Update - ObjectID: 102, PhoneNumber: from 615-473-6079 to 383-287-1506, EmailAddress: from scottalvarez8287@gmail.com to nebolondicsal@nguyenvuquocanh.com. Success.
+14:44:57 - Contact Info Update - ObjectID: 265, PhoneNumber: from 126-187-5198 to 320-401-1385, EmailAddress: from tonyvazquez4853@gmail.com to nekropolis@becknellsbakery.com. Success.
+14:44:57 - Contact Info Update - ObjectID: 156, PhoneNumber: from 306-563-6137 to 153-734-8335, EmailAddress: from rebeccataylor6473@gmail.com to vicay2006@ebarg.net. Success.
+14:44:57 - Contact Info Update - ObjectID: 163, PhoneNumber: from 995-001-7129 to 633-644-7562, EmailAddress: from johnjohnson2797@gmail.com to judsuss@naverly.com. Success.
+14:44:58 - Contact Info Update - ObjectID: 264, PhoneNumber: from 134-860-8927 to 505-331-4035, EmailAddress: from coreythomas2128@gmail.com to gr8find@abilitys.site. Success.
+14:44:58 - Contact Info Update - ObjectID: 157, PhoneNumber: from 158-552-8728 to 132-878-5307, EmailAddress: from brianstephens694@gmail.com to jaclyn78@abilitys.site. Success.
+14:44:59 - Contact Info Update - ObjectID: 261, PhoneNumber: from 974-420-5409 to 430-361-7186, EmailAddress: from sarahhobbs1352@gmail.com to shaitis@centromedicoesteticodsagas.com. Success.
+14:44:59 - Contact Info Update - ObjectID: 251, PhoneNumber: from 833-252-8126 to 385-172-2321, EmailAddress: from rebeccadean4758@gmail.com to eyon@btcmod.com. Success.
+14:44:59 - Contact Info Update - ObjectID: 171. Object not found.
+14:45:00 - Contact Info Update - ObjectID: 115, PhoneNumber: from 463-722-9752 to 635-084-5411, EmailAddress: from philipbell3773@gmail.com to bevzsergey1972@domiaaan2.online. Success.
+14:45:00 - Contact Info Update - ObjectID: 144, PhoneNumber: from 614-203-0297 to 076-370-5877, EmailAddress: from paulmiller1295@gmail.com to ertan4@villastream.xyz. Success.
+14:45:01 - Contact Info Update - ObjectID: 154, PhoneNumber: from 906-465-6730 to 885-053-2101, EmailAddress: from aaronbeasley2512@gmail.com to voteforpablo@dealyaari.com. Success.
+14:45:01 - Contact Info Update - ObjectID: 281, PhoneNumber: from 626-752-6781 to 784-272-4668, EmailAddress: from kristenpeterson4653@gmail.com to saver7@degioparfume.com. Success.
+14:45:01 - Contact Info Update - ObjectID: 131, PhoneNumber: from 442-521-4222 to 070-023-1168, EmailAddress: from makaylavillanueva2283@gmail.com to strobl@rhafhamed.online. Success.
+14:45:02 - Contact Info Update - ObjectID: 223, PhoneNumber: from 807-553-9928 to 311-773-0422, EmailAddress: from andrewpark3633@gmail.com to ckwon@sdaouig2.shop. Success.
+14:45:02 - Contact Info Update - ObjectID: 248, PhoneNumber: from 346-535-4600 to 707-216-4622, EmailAddress: from johnwalker2730@gmail.com to sukur1995tm@havenbeat.com. Success.
+14:45:03 - Contact Info Update - ObjectID: 171. Object not found.
+14:45:03 - Contact Info Update - ObjectID: 270, PhoneNumber: from 901-436-5934 to 267-744-0251, EmailAddress: from vanessarivera411@gmail.com to heats302@supersetsbarbershop.com. Success.
+14:45:03 - Contact Info Update - ObjectID: 255, PhoneNumber: from 510-733-2602 to 368-463-7437, EmailAddress: from melissaroberts5088@gmail.com to s151236@alphabrc.com. Success.
+14:45:04 - Contact Info Update - ObjectID: 112, PhoneNumber: from 432-154-5129 to 064-178-6230, EmailAddress: from jamesrobertson4976@gmail.com to oksanahatipova@degioparfume.com. Success.
+14:45:04 - Contact Info Update - ObjectID: 250, PhoneNumber: from 767-761-2921 to 277-008-6812, EmailAddress: from davidmckenzie1667@gmail.com to alanste@koreaful.com. Success.
+14:45:05 - Contact Info Update - ObjectID: 268, PhoneNumber: from 953-026-9876 to 524-850-0158, EmailAddress: from jennifercastillo4844@gmail.com to lanselot095@alexcabrera.net. Success.
+14:45:05 - Contact Info Update - ObjectID: 148, PhoneNumber: from 236-702-8671 to 166-418-6830, EmailAddress: from chadlee7580@gmail.com to sleeepy3@sportscardsfanatics.com. Success.
+14:45:05 - Contact Info Update - ObjectID: 147. Object not found.
+14:45:06 - Contact Info Update - ObjectID: 239, PhoneNumber: from 625-332-7250 to 466-371-4357, EmailAddress: from carllove4204@gmail.com to varstar@sportscardsfanatics.com. Success.
+14:45:06 - Contact Info Update - ObjectID: 206, PhoneNumber: from 202-755-5253 to 431-481-8456, EmailAddress: from juliedunn154@gmail.com to deirdre10@speeddataanalytics.com. Success.
+14:45:07 - Contact Info Update - ObjectID: 281, PhoneNumber: from 784-272-4668 to 867-441-4812, EmailAddress: from saver7@degioparfume.com to nofear7@maintenances.us. Success.
+14:45:07 - Contact Info Update - ObjectID: 104. Object not found.
+14:45:08 - Contact Info Update - ObjectID: 247, PhoneNumber: from 377-170-6796 to 106-665-7586, EmailAddress: from carolynavila7464@gmail.com to nikitalykov74@kongtoan.com. Success.
+14:45:08 - Contact Info Update - ObjectID: 237, PhoneNumber: from 444-110-6050 to 673-107-2151, EmailAddress: from martinpope9837@gmail.com to mrmojo23@otpku.com. Success.
+14:45:08 - Contact Info Update - ObjectID: 295, PhoneNumber: from 697-311-9160 to 424-487-6120, EmailAddress: from veronicaanderson9326@gmail.com to aren01@muataikhoan.info. Success.
+14:45:09 - Contact Info Update - ObjectID: 122, PhoneNumber: from 499-280-0374 to 878-343-0016, EmailAddress: from laurenpreston1321@gmail.com to ggfre@domiaaan2.online. Success.
+14:45:09 - Contact Info Update - ObjectID: 127, PhoneNumber: from 898-187-5805 to 712-023-7872, EmailAddress: from sarahgibson2084@gmail.com to muhidshamsudinov@rftdsagfdsv.shop. Success.
+14:45:10 - Contact Info Update - ObjectID: 285, PhoneNumber: from 725-323-0429 to 063-852-3407, EmailAddress: from kevinlivingston7476@gmail.com to asiak@utplexpotrabajos.com. Success.
+14:45:10 - Contact Info Update - ObjectID: 115, PhoneNumber: from 635-084-5411 to 342-403-6232, EmailAddress: from bevzsergey1972@domiaaan2.online to rmbpjvc@mytempmail.org. Success.
+14:45:10 - Contact Info Update - ObjectID: 243, PhoneNumber: from 386-113-8841 to 578-537-2813, EmailAddress: from susangallegos1958@gmail.com to lance199115@utplexpotrabajos.com. Success.
+14:45:11 - Contact Info Update - ObjectID: 217, PhoneNumber: from 892-636-7255 to 872-423-1725, EmailAddress: from louisbeck2619@gmail.com to dawidklingbein@ranchodasimpex.com. Success.
+14:45:11 - Contact Info Update - ObjectID: 183, PhoneNumber: from 129-070-6493 to 043-566-5860, EmailAddress: from beckyherrera4947@gmail.com to gored47024@adsta415-674-2836m.com. Success.

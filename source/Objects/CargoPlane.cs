@@ -1,5 +1,4 @@
-﻿
-using OOD_24L_01180686.source.Reports;
+﻿using OOD_24L_01180686.source.Reports;
 
 namespace OOD_24L_01180686.source.Objects
 {
@@ -14,7 +13,8 @@ namespace OOD_24L_01180686.source.Objects
             FieldMap.Add("MaxLoad", () => MaxLoad);
         }
 
-        public CargoPlane(ulong ID, string serialNr, string countryISO, string model, float maxLoad) : base(ID, serialNr, countryISO, model)
+        public CargoPlane(ulong ID, string serialNr, string countryISO, string model, float maxLoad) : base(ID,
+            serialNr, countryISO, model)
         {
             this.MaxLoad = maxLoad;
 

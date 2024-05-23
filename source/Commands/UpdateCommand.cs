@@ -13,7 +13,8 @@ namespace OOD_24L_01180686.source.Commands
         public Dictionary<string, string> KeyValuePairs { get; }
         public string Conditions { get; }
 
-        public UpdateCommand(string objectClass, Dictionary<string, string> keyValuePairs, string conditions) : base(objectClass)
+        public UpdateCommand(string objectClass, Dictionary<string, string> keyValuePairs, string conditions) : base(
+            objectClass)
         {
             KeyValuePairs = keyValuePairs;
             Conditions = conditions;

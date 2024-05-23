@@ -48,12 +48,14 @@ namespace OOD_24L_01180686.source.Commands
             {
                 Console.Write("| " + headers[i].PadRight(columnWidths[i]) + " ");
             }
+
             Console.WriteLine("|");
 
             for (int i = 0; i < headers.Length; i++)
             {
                 Console.Write("|-" + new string('-', columnWidths[i]) + "-");
             }
+
             Console.WriteLine("|");
 
             foreach (var row in rows)
@@ -62,6 +64,7 @@ namespace OOD_24L_01180686.source.Commands
                 {
                     Console.Write("| " + row[i].PadLeft(columnWidths[i]) + " ");
                 }
+
                 Console.WriteLine("|");
             }
         }
@@ -103,12 +106,11 @@ namespace OOD_24L_01180686.source.Commands
                     var propertyValue = entity.GetFieldValue(field);
                     fieldDict[field] = propertyValue;
                 }
+
                 fieldData.Add(fieldDict);
             }
 
             return fieldData;
         }
-
-
     }
 }

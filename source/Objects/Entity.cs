@@ -1,5 +1,4 @@
-﻿
-namespace OOD_24L_01180686.source.Objects
+﻿namespace OOD_24L_01180686.source.Objects
 {
     public class Entity : IType
     {

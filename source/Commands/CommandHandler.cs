@@ -40,6 +40,16 @@ namespace OOD_24L_01180686.source.Commands
                         Console.WriteLine(news);
                     }
                 }
+                else if (input.ToLower() == "help")
+                {
+                    Console.WriteLine("Commands: print, report, display, update, add, delete, exit");
+                    Console.WriteLine(
+                        "Display syntax: display {object_fields} from {object_class} where {conditions}");
+                    Console.WriteLine(
+                        "Update syntax: update {object_class} set ({key_value_list}) where {conditions}");
+                    Console.WriteLine("Add syntax: add {object_class} new ({key_value_list})");
+                    Console.WriteLine("Delete syntax: delete {object_class} where {conditions}");
+                }
                 else if (input.ToLower() == "exit")
                 {
                     server.StopServer().Wait();
@@ -48,11 +58,12 @@ namespace OOD_24L_01180686.source.Commands
                 }
                 else
                 {
-                    Command command;
-                    try { 
-                        command = CommandParser.Parse(input);
+                    try
+                    {
+                        Command command = CommandParser.Parse(input);
                         command.Execute();
-                    } catch (Exception ex)
+                    }
+                    catch (Exception ex)
                     {
                         Console.WriteLine(ex.Message);
                     }

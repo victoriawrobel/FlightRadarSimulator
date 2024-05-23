@@ -1,5 +1,4 @@
-﻿
-namespace OOD_24L_01180686.source.Objects
+﻿namespace OOD_24L_01180686.source.Objects
 {
     public class Passenger : Person
     {
@@ -15,7 +14,8 @@ namespace OOD_24L_01180686.source.Objects
             FieldMap.Add("Miles", () => Miles);
         }
 
-        public Passenger(ulong ID, string name, ulong age, string phone, string email, string cabinClass, ulong miles) : base(ID, name, age, phone, email)
+        public Passenger(ulong ID, string name, ulong age, string phone, string email, string cabinClass, ulong miles) :
+            base(ID, name, age, phone, email)
         {
             this.CabinClass = cabinClass;
             this.Miles = miles;
