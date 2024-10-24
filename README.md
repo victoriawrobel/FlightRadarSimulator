@@ -1,7 +1,7 @@
 # FlightRadar - Flight Data Management Application
 
 ## Overview
-FlightRadar is a flight data management application developed using C#. This project emphasizes the application of Object-Oriented Design (OOD) principles to create a scalable, maintainable, and efficient software solution. It loads flight data from files, simulates real-time updates via a network source, synchronizes with a graphical user interface (GUI), and supports data manipulation through commands. Additionally, it generates news reports about flights and manages dynamic updates efficiently.
+FlightRadar is a flight data management application I developed using C# on one of the subjects during my Computer Science studies at the university for my BSc degree. This project emphasizes the application of Object-Oriented Design (OOD) principles to create a scalable, maintainable, and efficient software solution. It loads flight data from files, simulates real-time updates via a network source, synchronizes with a graphical user interface (GUI), and supports data manipulation through commands. Additionally, it generates news reports about flights and manages dynamic updates efficiently.
 
 ## Features
 1. **Data Loading and Serialization**  
